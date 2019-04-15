@@ -1,0 +1,3 @@
+name: movies-frontend
+image: okteto/node:10
+workdir: /app

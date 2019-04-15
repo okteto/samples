@@ -1,0 +1,43 @@
+{
+  "id": 27,
+  "page": 1,
+  "results": [
+    {
+      "id": 346910,
+      "vote_average": 5.3,
+      "original_title": "Kung Fu League",
+      "backdrop_path": "/rW0A73hjzPWVwADlCTLnjLhAFLX.jpg",
+      "overview": "Martial arts comedy following a group of kung fu legends banding together to take on the bad guys. The legends includes VINCENT ZHAO reprising his role as ‘Wong Fei Hung’ with DENNIS TO once again portraying ‘Wing Chun’ master ‘Ip Man’, DANNY CHAN KWOK KWAN as ‘Chen Zhen’ and ANDY ON as master ‘Huo Yuan Jia’."
+    },
+    {
+      "id": 332562,
+      "vote_average": 7.6,
+      "original_title": "A Star Is Born",
+      "backdrop_path": "/840rbblaLc4SVxm8gF3DNdJ0YAE.jpg",
+      "overview": "Seasoned musician Jackson Maine discovers—and falls in love with—struggling artist Ally. She has just about given up on her dream to make it big as a singer—until Jack coaxes her into the spotlight. But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons."
+    },
+    {
+      "id": 260513,
+      "vote_average": 7.6,
+      "original_title": "Incredibles 2",
+      "backdrop_path": "/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg",
+      "overview": "Elastigirl springs into action to save the day, while Mr. Incredible faces his greatest challenge yet – taking care of the problems of his three children."
+    },
+    {
+      "id": 442249,
+      "vote_average": 5.8,
+      "original_title": "The First Purge",
+      "backdrop_path": "/1hJbE72WiRuWH11QPNiHsvt29xA.jpg",
+      "overview": "To push the crime rate below one percent for the rest of the year, the New Founding Fathers of America test a sociological theory that vents aggression for one night in one isolated community. But when the violence of oppressors meets the rage of the others, the contagion will explode from the trial-city borders and spread across the nation."
+    },
+    {
+      "id": 238636,
+      "vote_average": 6.6,
+      "original_title": "The Purge: Anarchy",
+      "backdrop_path": "/zWGAnbxjjwY3xFGuOeR26LGbBlG.jpg",
+      "overview": "One night per year, the government sanctions a 12-hour period in which citizens can commit any crime they wish -- including murder -- without fear of punishment or imprisonment. Leo, a sergeant who lost his son, plans a vigilante mission of revenge during the mayhem. However, instead of a death-dealing avenger, he becomes the unexpected protector of four innocent strangers who desperately need his help if they are to survive the night."
+    }
+  ],
+  "total_pages": 994,
+  "total_results": 19866
+}
