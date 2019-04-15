@@ -1,0 +1,14 @@
+{
+  "name": "okteto-movies-api",
+  "version": "0.1.0",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.2.3",
+    "nodemon": "^1.18.9"
+  },
+  "scripts": {
+    "start": "yarn install && nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

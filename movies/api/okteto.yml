@@ -1,0 +1,5 @@
+name: movies-api
+image: okteto/node:10
+workdir: /usr/src/app
+command: 
+  - bash

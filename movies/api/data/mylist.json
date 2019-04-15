@@ -1,0 +1,42 @@
+{
+  "page": 1,
+  "total_results": 385350,
+  "total_pages": 19268,
+  "results": [
+    {
+      "id": 260513,
+      "vote_average": 7.6,
+      "original_title": "Incredibles 2",
+      "backdrop_path": "/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg",
+      "overview": "Elastigirl springs into action to save the day, while Mr. Incredible faces his greatest challenge yet – taking care of the problems of his three children."
+    },
+    {
+      "id": 507569,
+      "vote_average": 6,
+      "original_title": "Sky Fish",
+      "backdrop_path": "/uKwOX7MtKlAaGeCQe6c4jc1vZpj.jpg",
+      "overview": "Traveling in search of the rare ingredient, “sky fish”  Meliodas and Hawk arrive at a palace that floats above the clouds. The people there are busy preparing a ceremony, meant to protect their home from a ferocious beast that awakens once every 3,000 years. But before the ritual is complete, the Six Knights of Black—a Demon Clan army—removes the seal on the beast, threatening the lives of everyone in the Sky Palace."
+    },
+    {
+      "id": 332562,
+      "vote_average": 7.6,
+      "original_title": "A Star Is Born",
+      "backdrop_path": "/840rbblaLc4SVxm8gF3DNdJ0YAE.jpg",
+      "overview": "Seasoned musician Jackson Maine discovers—and falls in love with—struggling artist Ally. She has just about given up on her dream to make it big as a singer—until Jack coaxes her into the spotlight. But even as Ally's career takes off, the personal side of their relationship is breaking down, as Jack fights an ongoing battle with his own internal demons."
+    },
+    {
+      "id": 345887,
+      "vote_average": 6.2,
+      "original_title": "The Equalizer 2",
+      "backdrop_path": "/z6KLDE72SxE1A8JcJTmmnWArOvR.jpg",
+      "overview": "Robert McCall, who serves an unflinching justice for the exploited and oppressed, embarks on a relentless, globe-trotting quest for vengeance when a long-time girl friend is murdered."
+    },
+    {
+      "id": 439079,
+      "vote_average": 5.8,
+      "original_title": "The Nun",
+      "backdrop_path": "/fgsHxz21B27hOOqQBiw9L6yWcM7.jpg",
+      "overview": "When a young nun at a cloistered abbey in Romania takes her own life, a priest with a haunted past and a novitiate on the threshold of her final vows are sent by the Vatican to investigate. Together they uncover the order’s unholy secret. Risking not only their lives but their faith and their very souls, they confront a malevolent force in the form of the same demonic nun that first terrorized audiences in “The Conjuring 2” as the abbey becomes a horrific battleground between the living and the damned."
+    }
+  ]
+}
