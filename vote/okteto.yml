@@ -1,5 +1,0 @@
-name: vote
-image: okteto/python:3
-workdir: /usr/src/app
-command:
-- bash
