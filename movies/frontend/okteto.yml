@@ -1,3 +1,5 @@
 name: movies-frontend
 image: okteto/node:10
-workdir: /app
+workdir: /usr/src/app
+command: 
+  - bash
