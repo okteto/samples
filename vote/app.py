@@ -15,8 +15,8 @@ app = Flask(__name__)
 @app.route("/", methods=['POST','GET'])
 def hello():
     try:
-        votesA = int(redis.get(optionA)) or 0
-        votesB = int(redis.get(optionB)) or 0
+        votesA = int(redis.get(optionA) or 0) 
+        votesB = int(redis.get(optionB) or 0)
     except RedisError:
         votesA = "<i>cannot connect to Redis, counter disabled</i>"
         votesB = "<i>cannot connect to Redis, counter disabled</i>"
