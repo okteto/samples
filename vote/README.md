@@ -39,8 +39,15 @@ python app.py
 Check that your application is running by going to [Okteto](https://cloud.okteto.com) and clicking the endpoint of your application.
 
 As you can see, the app is failing because it requires a redis database running on your Okteto environment.
-[Okteto](https://cloud.okteto.com) and click the `+` buttom on the right, pick `Database` and the `Redis`. Check again your application and now you should have your python application up and running.
+[Okteto](https://cloud.okteto.com) and click the `+` symbol in the bottom right, pick `Database` and the `Redis`. Reload your browser and your python application will be up and running.
 
-Now your app is ready for code changes. Edit the file `vote/app.py` and change the `optionA` in line 8 from "Cats" to "Otters". Save your changes.
+Now your app is ready for code changes. Open `vote/app.py` in your favorite IDE and modify the `getOptions` function with the following code, and save your file:
 
-Finally, refresh the Voting App UI, and cool! your code changes are live!
+```python
+def getOptions():
+    optionA = 'Otters'
+    optionB = 'Dogs'
+    return optionA, optionB
+```
+
+Go back to the browser, and reload the page. Notice how your changes are instantly applied. No commit or push required 😎! 
