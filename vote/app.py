@@ -1,19 +1,23 @@
 from flask import Flask, render_template, request, make_response, g
 from redis import Redis, RedisError
-import os
 import socket
 import random
 import json
 
-optionA = os.getenv('OPTION_A', 'Cats')
-optionB = os.getenv('OPTION_B', 'Dogs')
 hostname = socket.gethostname()
 
 redis = Redis(host="redis", db=0)
 app = Flask(__name__)
 
+def getOptions():
+    optionA = 'Cats'
+    optionB = 'Dogs'
+    return optionA, optionB
+
 @app.route("/", methods=['POST','GET'])
 def hello():
+    optionA, optionB = getOptions()
+
     try:
         votesA = int(redis.get(optionA) or 0) 
         votesB = int(redis.get(optionB) or 0)
