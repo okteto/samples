@@ -68,11 +68,11 @@ okteto> yarn start
 
 The frontend of your application is now ready to be tested. You can check it by browsing the application's endpoint (see console output). 
 
-<p align="center"><img src="images/movies-frontend.jpg" width="500" /></p>
+<p align="center"><img src="images/movies-frontend.jpg" width="550" /></p>
 
 You can also check your environments by logging into [Okteto](https://cloud.okteto.com) and clicking on the application’s endpoint:
 
-<p align="center"><img src="images/okteto-ui.png" width="650" /></p>
+<p align="center"><img src="images/okteto-ui.png" width="550" /></p>
 
 > Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
 
@@ -103,7 +103,7 @@ Go back to your browser and refresh the page. You'll see how the front-end is no
 
 Congratulations, you just deployed your first multi-service application using Okteto 🚀! 
 
-<p align="center"><img src="images/okteto-ui-full.png" width="650" /></p>
+<p align="center"><img src="images/okteto-ui-full.png" width="550" /></p>
 
 ### Develop as a Cloud Native Developer
 
