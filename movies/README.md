@@ -8,7 +8,7 @@ The Movies application exposes three services:
 - A very simple Node.js API using [Express](https://expressjs.com).
 - A [MongoDB](https://www.mongodb.com) database.
 
-### Step 1: Install the Okteto CLI
+## Step 1: Install the Okteto CLI
 
 Install the Okteto CLI by running:
 
@@ -24,7 +24,7 @@ wget https://downloads.okteto.com/cloud/cli/okteto-Windows-x86_64 -OutFile c:\wi
 
 if you are in Windows.
 
-### Step 2: Login from the Okteto CLI
+## Step 2: Login from the Okteto CLI
 
 ```console
 $ okteto login
@@ -32,7 +32,7 @@ $ okteto login
 
 This will give you an Okteto Space, where you can create Okteto Environments to code and collaborate.
 
-### Step 3: Create your Okteto Environments
+## Step 3: Create your Okteto Environments
 
 Clone the samples repository:
 
@@ -42,7 +42,7 @@ $ git clone https://github.com/okteto/cloud-samples
 
 Now that you have the application code in your local machine, let's create your Okteto Environments to run the application directly in the cluster.
 
-### Step 3.1: Launch front-end environment
+## Step 3.1: Launch front-end environment
 
 Move to the movies front-end code directory:
 
@@ -76,7 +76,7 @@ You can also check your environments by logging into [Okteto](https://cloud.okte
 
 > Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
 
-### Step 3.2: Launch API environment
+## Step 3.2: Launch API environment
 
 You may have noticed that the app is missing information and there are errors in your browser's console. The frontend depends on an API and a database to retrieve the movies data. 
 
@@ -105,7 +105,7 @@ Congratulations, you just deployed your first multi-service application using Ok
 
 <p align="center"><img src="images/okteto-ui-full.png" width="550" /></p>
 
-### Develop as a Cloud Native Developer
+## Develop as a Cloud Native Developer
 
 Now things get even more exciting. You can now develop *directly in the cluster*. The API service and database will be available at all times. No need to mock the service nor use any kind of redirection.
  
