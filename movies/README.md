@@ -58,7 +58,7 @@ $ okteto up
 
 The `okteto up` command will automatically start an Okteto Environment. It will also start a *file synchronization service* to keep your changes up to date between your local filesystem and your Okteto Environment, without rebuilding containers (eliminating the docker build/push/pull/redeploy cycle).
 
-<img style="display: block; margin: 0 auto" src="images/okteto-up.png" width="750" />
+<p align="center"><img src="images/okteto-up.png" width="750" /></p>
 
 Once the Okteto Environment is ready, the Okteto Terminal will automatically open. Use it to run your frontend with the same flow you would have locally:
 
@@ -68,11 +68,11 @@ okteto> yarn start
 
 The frontend of your application is now ready to be tested. You can check it by browsing the application's endpoint (see console output). 
 
-<img style="display: block; margin: 0 auto" src="images/movies-frontend.jpg" width="500" />
+<p align="center"><img src="images/movies-frontend.jpg" width="500" /></p>
 
 You can also check your environments by logging into [Okteto](https://cloud.okteto.com) and clicking on the application’s endpoint:
 
-<img style="display: block; margin: 0 auto" src="images/okteto-ui.png" width="650" />
+<p align="center"><img src="images/okteto-ui.png" width="650" /></p>
 
 > Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
 
@@ -103,7 +103,7 @@ Go back to your browser and refresh the page. You'll see how the front-end is no
 
 Congratulations, you just deployed your first multi-service application using Okteto 🚀! 
 
-<img style="display: block; margin: 0 auto" src="images/okteto-ui-full.png" width="650" />
+<p align="center"><img src="images/okteto-ui-full.png" width="650" /></p>
 
 ### Develop as a Cloud Native Developer
 
@@ -113,4 +113,4 @@ In your IDE edit the file `frontend/src/App.jsx` and change the `Okteflix` text 
 
 Go back to the browser, and cool! Your changes are automatically live with no need to refresh your browser! Everything happened in the cluster but no commit or push was required 😎!
 
-<img style="display: block; margin: 0 auto" src="images/okteflix.gif" width="650" />
+<p align="center"><img src="images/okteflix.gif" width="650" /></p>
