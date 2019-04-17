@@ -42,7 +42,7 @@ $ git clone https://github.com/okteto/cloud-samples
 
 Now that you have the application code in your local machine, let's create your Okteto Environments to run the application directly in the cluster.
 
-## Step 3.1: Launch front-end environment
+### Step 3.1: Launch front-end environment
 
 Move to the movies front-end code directory:
 
@@ -76,7 +76,7 @@ You can also check your environments by logging into [Okteto](https://cloud.okte
 
 <p align="center"><img src="images/okteto-ui.png" width="550" /></p>
 
-## Step 3.2: Launch API environment
+### Step 3.2: Launch API environment
 
 You may have noticed that the app is missing information and there are errors in your browser's console. The frontend depends on an API and a database to retrieve the movies data. 
 
