@@ -89,7 +89,7 @@ class App extends Component {
       <div className="App">
         <header className={`Header ${this.state.fixHeader ? 'fixed' : ''}`}>
           <div className="content">
-            <div className="logo">Kubeflix</div>
+            <div className="logo">Netflix</div>
             <ul className="menu">
               <li className="selected">Home</li>
               <li>TV Shows</li>

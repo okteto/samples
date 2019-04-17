@@ -32,8 +32,8 @@
     "webpack-dev-server": "git://github.com/rlamana/webpack-dev-server#hmr-use-location-port"
   },
   "scripts": {
-    "start": "yarn install && yarn serve",
-    "serve": "./node_modules/.bin/webpack-dev-server",
+    "start": "yarn install && yarn devel",
+    "devel": "./node_modules/.bin/webpack-dev-server",
     "build": "./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
