@@ -68,13 +68,13 @@ okteto> yarn start
 
 The frontend of your application is now ready to be tested. You can check it by browsing the application's endpoint (see console output). 
 
+> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
+
 <p align="center"><img src="images/movies-frontend.jpg" width="550" /></p>
 
 You can also check your environments by logging into [Okteto](https://cloud.okteto.com) and clicking on the application’s endpoint:
 
 <p align="center"><img src="images/okteto-ui.png" width="550" /></p>
-
-> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
 
 ## Step 3.2: Launch API environment
 
