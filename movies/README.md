@@ -96,7 +96,7 @@ $ okteto up
 Once you are inside the Okteto Terminal, launch the API express server:
 
 ```console
-$ yarn start
+okteto> yarn start
 ```
 
 Go back to your browser and refresh the page. You'll see how the front-end is now populated with all the movies information.
