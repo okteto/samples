@@ -4,19 +4,19 @@ This example shows how to leverage [Okteto](https://cloud.okteto.com) to develop
 
 ### Step 1: Install the Okteto CLI
 
-Install the Okteto CLI by running:
+Install the Okteto CLI by running the following command in your local terminal:
+
+MacOS/Linux
 
 ```console
 curl https://get.okteto.com -sSfL | sh
 ```
 
-if you are in Linux/MacOS, or by running:
+Windows
 
 ```console
 wget https://downloads.okteto.com/cloud/cli/okteto-Windows-x86_64 -OutFile c:\windows\system32\okteto.exe
 ```
-
-if you are in Windows.
 
 ### Step 2: Login from the Okteto CLI
 
