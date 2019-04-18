@@ -10,19 +10,20 @@ The Movies application exposes three services:
 
 ## Step 1: Install the Okteto CLI
 
-Install the Okteto CLI by running:
+Install the Okteto CLI by running the following command in your local terminal:
+
+MacOS/Linux
 
 ```console
 curl https://get.okteto.com -sSfL | sh
 ```
 
-if you are in Linux/MacOS, or by running:
+Windows
 
 ```console
 wget https://downloads.okteto.com/cloud/cli/okteto-Windows-x86_64 -OutFile c:\windows\system32\okteto.exe
 ```
 
-if you are in Windows.
 
 ## Step 2: Login from the Okteto CLI
 
@@ -30,7 +31,7 @@ if you are in Windows.
 $ okteto login
 ```
 
-This will give you an Okteto Space, where you can create Okteto Environments to code and collaborate.
+This command will give you an Okteto Space, where you can create Okteto Environments to code and collaborate.
 
 ## Step 3: Create your Okteto Environments
 
@@ -40,7 +41,7 @@ Clone the samples repository:
 $ git clone https://github.com/okteto/cloud-samples
 ```
 
-Now that you have the application code in your local machine, let's create your Okteto Environments to run the application directly in the cluster.
+Now that you have the application code in your local machine, let's create an Okteto Environments to run the application directly in the cluster.
 
 ### Step 3.1: Launch front-end environment
 
@@ -80,13 +81,13 @@ You can also check your environments by logging into [Okteto](https://cloud.okte
 
 You may have noticed that the app is missing information and there are errors in your browser's console. The frontend depends on an API and a database to retrieve the movies data. 
 
-The API uses a MongoDB database. In a **new terminal** run the following command to deploy an Okteto MongoDB database into your Okteto Space:
+The API uses a MongoDB database. You can simply deploy a MongoDB database into your Okteto Space by running the following command in a **new terminal** :
 
 ```console
 $ okteto database mongo
 ```
 
-Now we need the API where the frontend can connect to. From the API source directory run again the Okteto CLI to create a new environment:
+Now we need the API service for the frontend to connect to. Open a new terminal, go to the API's source directory, and run the Okteto CLI again to create a second environment:
 
 ```console
 $ cd cloud-samples/movies/api
@@ -107,10 +108,10 @@ Congratulations, you just deployed your first multi-service application using Ok
 
 ## Develop as a Cloud Native Developer
 
-Now things get even more exciting. You can now develop *directly in the cluster*. The API service and database will be available at all times. No need to mock the service nor use any kind of redirection.
+Now things get even more exciting. You can now develop *directly in the cluster*. The API service and database will be available at all times. No need to mock services nor use any kind of redirection.
  
 In your IDE edit the file `frontend/src/App.jsx` and change the `Okteflix` text in line 92 to `Netflix`. Save your changes.
 
-Go back to the browser, and cool! Your changes are automatically live with no need to refresh your browser! Everything happened in the cluster but no commit or push was required 😎!
+Go back to the browser, and cool! Your changes are automatically live with no need to refresh your browser. Everything happened in the cluster but no commit or push was required 😎!
 
 <p align="center"><img src="images/okteflix.gif" width="650" /></p>
