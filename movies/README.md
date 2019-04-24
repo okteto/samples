@@ -91,14 +91,10 @@ Now we need the API service for the frontend to connect to. Open a new terminal,
 
 ```console
 $ cd cloud-samples/movies/api
-$ okteto up
+$ okteto run okteto/movies:api
 ```
 
-Once you are inside the Okteto Terminal, launch the API express server:
-
-```console
-okteto> yarn start
-```
+This command deploys the API express server in your Okteto Space.
 
 Go back to your browser and refresh the page. You'll see how the front-end is now populated with all the movies information.
 
@@ -106,7 +102,7 @@ Congratulations, you just deployed your first multi-service application using Ok
 
 <p align="center"><img src="images/okteto-ui-full.png" width="550" /></p>
 
-## Develop as a Cloud Native Developer
+## Step 4: Develop directly in the cloud
 
 Now things get even more exciting. You can now develop *directly in the cluster*. The API service and database will be available at all times. No need to mock services nor use any kind of redirection.
  
@@ -115,3 +111,15 @@ In your IDE edit the file `frontend/src/App.jsx` and change the `Okteflix` text 
 Go back to the browser, and cool! Your changes are automatically live with no need to refresh your browser. Everything happened in the cluster but no commit or push was required 😎!
 
 <p align="center"><img src="images/okteflix.gif" width="650" /></p>
+
+## Step 5: Deploy your application
+
+Now that you are happy with your changes, it is time to deploy them.
+
+Press `ctrl + c` and `ctrl + d` to go back to your local terminal at the `frontend` folder, and execute:
+
+```console
+$ okteto run okteto/movies:frontend
+```
+
+This command replaces your Okteto Environment by a service running `okteto/movies:frontend`. If you want to use another docker image, you will need to build and push it to a public docker registry. (*[Contact us](mailto:sales@okteto.com?Subject=Support for private images)  if you're interested in support for private images*).
