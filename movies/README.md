@@ -94,7 +94,7 @@ $ cd cloud-samples/movies/api
 $ okteto run okteto/movies:api
 ```
 
-This command deploys the API express serverin your Okteto Space.
+This command deploys the API express server in your Okteto Space.
 
 Go back to your browser and refresh the page. You'll see how the front-end is now populated with all the movies information.
 
@@ -122,4 +122,4 @@ Press `ctrl + c` and `ctrl + d` to go back to your local terminal at the `fronte
 $ okteto run okteto/movies:frontend
 ```
 
-This command replaces your Okteto Environment by a service running `okteto/movies:frontend`. If you want to use another docker image, your will need to build and push it manually (*note: contact us for private images support*).
+This command replaces your Okteto Environment by a service running `okteto/movies:frontend`. If you want to use another docker image, you will need to build and push it to a public docker registry. (* [Contact us](mailto:sales@okteto.com?Subject=Support%20for%20private%images)  if you're interested in support for private images *).
