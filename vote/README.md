@@ -2,7 +2,7 @@
 
 This example shows how to leverage [Okteto](https://cloud.okteto.com) to develop a python app directly in the cloud. 
 
-### Step 1: Install the Okteto CLI
+## Step 1: Install the Okteto CLI
 
 Install the Okteto CLI by running the following command in your local terminal:
 
@@ -18,17 +18,15 @@ Windows
 wget https://downloads.okteto.com/cloud/cli/okteto-Windows-x86_64 -OutFile c:\windows\system32\okteto.exe
 ```
 
-if you are in Windows.
-
-### Step 2: Login from the Okteto CLI
+## Step 2: Login from the Okteto CLI
 
 ```console
 $ okteto login
 ```
 
-This will give you an Okteto Space, where you can create Okteto Environments to code and collaborate.
+This command will give you an Okteto Space, where you can create Okteto Environments to code and collaborate.
 
-### Step 3: Create your Okteto Environment
+## Step 3: Create your Okteto Environment
 
 Get a local version of the sample application by executing the following commands in your local terminal:
 
@@ -64,13 +62,13 @@ okteto> python app.py
 
 Your application is now ready to be tested. You can check it by logging into [Okteto](https://cloud.okteto.com) and clicking in the application's endpoint.
 
-<img class="center" src="images/okteto-ui.png" width="900" />
+> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
 
-Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
+<img class="center" src="images/okteto-ui.png" width="900" />
 
 Congratulations, you just deployed your first Okteto Application 🚀! 
 
-### Step 4: Develop directly in the cloud
+## Step 4: Develop directly in the cloud
 
 Now things get more exciting. Open `vote/app.py` in your favorite IDE and modify the `getOptions` function with the following code, and save your file:
 
@@ -92,3 +90,15 @@ Go back to the Okteto Terminal and notice that flask already detected the code c
 ```
 
 Go back to the browser, and reload the page. Notice how your changes are instantly applied. No commit or push required 😎! 
+
+## Step 5: Deploy your application
+
+Now that you are happy with your changes, it is time to deploy them.
+
+Press `ctrl + c` and `ctrl + d` to go back to your local terminal, and execute:
+
+```console
+$ okteto run okteto/vote:0.1.0
+```
+
+This command replaces your Okteto Environment by a service running `okteto/vote:0.1.0`. If you want to use another docker image, your will need to build and push it manually (*note: contact us for private images support*).
