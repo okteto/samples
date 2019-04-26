@@ -75,12 +75,23 @@ In just seconds, your code changes are live! Check it by accessing the path `/ti
 
 ## Step 5: Deploy your application
 
-Now that you are happy with your changes, it is time to deploy them.
+Now that you are happy with your changes, it's time to run your updated application with the `okteto run` command. Instead of launching an Okteto Environment and synchronizing your files, the `okteto run` command automatically deploys a container into your Okteto Space.
 
-Press `ctrl + c` and `ctrl + d` to go back to your local terminal, and execute:
+Let's build a Docker image with your latest changes. Press `ctrl + c` and `ctrl + d` in your Okteto Terminal to go back to your local terminal, and execute the following command to build your docker image and push it to [Docker Hub](https://docs.docker.com/docker-hub/repos/):
 
 ```console
-$ okteto run okteto/math:0.1.0
+$ docker build -t <hub-user>\math
+$ docker push <hub-user>\math
 ```
 
-This command replaces your Okteto Environment by a service running the `okteto/math:0.1.0` docker image. If you want to use another docker image, you will need to build and push it to a public docker registry. (*[Contact us](mailto:sales@okteto.com?Subject=Support for private images)  if you're interested in support for private images*).
+> If you don't have access to Docker Hub, you can use `okteto/math:0.1.0` instead of your own docker image to complete this step.
+
+Once your image is ready, run the following command to deploy your container:
+
+```console
+$ okteto run <hub-user>\math
+```
+
+After a couple of seconds, your application will be ready. Go back to the browser and reload the page to see your new docker container up and running. 
+
+> `okteto run` only supports images from public docker repositories.[Contact us](mailto:sales@okteto.com?Subject=Support for private images) if you're interested in support for private images
