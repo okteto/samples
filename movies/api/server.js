@@ -18,7 +18,7 @@ mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
   
   preloadData(db);
 
-  app.listen(8000, () => {
+  app.listen(8080, () => {
     app.get("/api/movies", (req, res, next) => {
       db.collection('movies').find().toArray( (err, results) =>{
         if (err){
@@ -54,7 +54,7 @@ mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
       });
     });
 
-    console.log("Server running on port 8000.");
+    console.log("Server running on port 8080.");
   });
 });
 

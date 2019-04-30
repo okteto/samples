@@ -53,7 +53,7 @@ okteto> go run main.go
 
 Your application is now ready to be tested. You can check it by browsing the application's endpoint, adding the path `/mult/3/4`. In our case, it would be the endpoint `https://damp-darkness.rberrelleza.cloud.okteto.net/mult/3/4`.
 
-> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
+> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8080 of your application.
 
 Congratulations, you just deployed your first Okteto Application 🚀! 
 
