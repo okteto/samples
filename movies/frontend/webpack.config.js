@@ -69,7 +69,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin()
   ],
   devServer: {
-    port: 8000,
+    port: 8080,
     host: '0.0.0.0',
     disableHostCheck: true,
     hot: true,
@@ -77,7 +77,7 @@ module.exports = {
       poll: true
     },
     proxy: {
-      '/api': 'http://movies-api:8000'
+      '/api': 'http://movies-api:8080'
     }
   }
 };

@@ -62,7 +62,7 @@ okteto> python app.py
 
 Your application is now ready to be tested. You can check it by logging into [Okteto](https://cloud.okteto.com) and clicking in the application's endpoint.
 
-> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
+> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8080 of your application.
 
 <img class="center" src="images/okteto-ui.png" width="900" />
 

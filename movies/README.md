@@ -69,7 +69,7 @@ okteto> yarn start
 
 The frontend of your application is now ready to be tested. You can check it by browsing the application's endpoint (see console output). 
 
-> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8000 of your application.
+> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8080 of your application.
 
 <p align="center"><img src="images/movies-frontend.jpg" width="550" /></p>
 
