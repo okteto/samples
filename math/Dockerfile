@@ -7,6 +7,6 @@ RUN go get github.com/astaxie/beego && go get github.com/beego/bee
 ADD . .
 RUN go build -o mathapp
 
-EXPOSE 8000
+EXPOSE 8080
 
 CMD ["./mathapp"]
