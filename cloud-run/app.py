@@ -4,16 +4,20 @@ import socket
 import random
 import json
 
-option_a = os.getenv('OPTION_A', "Cats")
-option_b = os.getenv('OPTION_B', "Dogs")
 hostname = socket.gethostname()
 votes = {option_a: 0, option_b: 0}
 
 app = Flask(__name__)
 
+def getOptions():
+    option_a = 'Cats'
+    option_b = 'Dogs'
+    return option_a, option_b
+
 @app.route("/", methods=['POST','GET'])
 def hello():
     vote = None
+    option_a, option_b = getOptions()
     if request.method == 'POST':
         vote = request.form['vote']
         vote = option_a if vote == "a" else option_b
