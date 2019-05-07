@@ -10,17 +10,17 @@ redis = Redis(host="redis", db=0)
 app = Flask(__name__)
 
 def getOptions():
-    optionA = 'Cats'
-    optionB = 'Dogs'
-    return optionA, optionB
+    option_a = 'Cats'
+    option_b = 'Dogs'
+    return option_a, option_b
 
 @app.route("/", methods=['POST','GET'])
 def hello():
-    optionA, optionB = getOptions()
+    option_a, option_b = getOptions()
 
     try:
-        votesA = int(redis.get(optionA) or 0) 
-        votesB = int(redis.get(optionB) or 0)
+        votesA = int(redis.get(option_a) or 0) 
+        votesB = int(redis.get(option_b) or 0)
     except RedisError:
         votesA = "<i>cannot connect to Redis, counter disabled</i>"
         votesB = "<i>cannot connect to Redis, counter disabled</i>"
@@ -29,9 +29,9 @@ def hello():
         try:
             vote = request.form['vote']
             if vote == "a":
-                votesA = redis.incr(optionA)
+                votesA = redis.incr(option_a)
             else:
-                votesB = redis.incr(optionB)
+                votesB = redis.incr(option_b)
         except Exception as e:
             print(e)
             votesA = "<i>An error occured</i>"
@@ -39,8 +39,8 @@ def hello():
 
     resp = make_response(render_template(
         'index.html',
-        option_a=optionA,
-        option_b=optionB,
+        option_a=option_a,
+        option_b=option_b,
         hostname=hostname,
         votes_a=votesA,
         votes_b=votesB,
