@@ -3,9 +3,10 @@ import os
 import socket
 import random
 import json
+import collections
 
 hostname = socket.gethostname()
-votes = {option_a: 0, option_b: 0}
+votes = collections.defaultdict(int)
 
 app = Flask(__name__)
 
