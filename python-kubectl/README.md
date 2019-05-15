@@ -44,7 +44,7 @@ $ okteto kubeconfig
 and now execute (remember to change `pablo` by your username):
 
 ```console
-$ export KUBECONFIG=/Users/pablo/.okteto/.kubeconfig
+$ export KUBECONFIG=$HOME/.okteto/.kubeconfig
 ```
 
 ## Step 4: Deploy the Voting App
