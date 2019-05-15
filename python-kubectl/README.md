@@ -66,7 +66,7 @@ Save and run the Voting App by executing:
 kubectl apply -f manifests
 ```
 
-Wait for one or two minutes until the application is running. You can access it here https://vote-[githubid].cloud.okteto.net.
+Wait for one or two minutes until the application is running. You can access it at https://vote-[githubid].cloud.okteto.net.
 
 ## Step 5: Develop as a Cloud Native Developer
 
