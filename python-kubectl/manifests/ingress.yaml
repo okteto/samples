@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx  
 spec:
   rules:
-  - host: vote-pchico83.cloud.okteto.net
+  - host: vote-cindy.cloud.okteto.net
     http:
       paths:
       - path: /
@@ -15,4 +15,4 @@ spec:
           servicePort: 8080
   tls:
   - hosts:
-    - vote-pchico83.cloud.okteto.net
+    - vote-cindy.cloud.okteto.net

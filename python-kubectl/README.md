@@ -36,12 +36,12 @@ Okteto gives you `kubectl` credentials configured to work in our multi-tenant cl
 
 ```console
 $ okteto kubeconfig
- ✓  Kubeconfig stored at /Users/pablo/.okteto/.kubeconfig
+ ✓  Kubeconfig stored at $HOME/.okteto/.kubeconfig
  i  Configure kubectl to work on your Okteto Space by running:
-    export KUBECONFIG=/Users/pablo/.okteto/.kubeconfig
+    export KUBECONFIG=$HOME/.okteto/.kubeconfig
 ```
 
-and now execute (remember to change `pablo` by your username):
+and now execute:
 
 ```console
 $ export KUBECONFIG=$HOME/.okteto/.kubeconfig
@@ -56,9 +56,9 @@ git clone https://github.com/okteto/cloud-samples
 cd cloud-samples/python-kubectl
 ```
 
-Edit the file `manifests\ingress.yaml` and substitute `pchico83` by your Github ID in lines 9 and 18.
+Edit the file `manifests\ingress.yaml` and substitute `cindy` by your Github ID in lines 9 and 18.
 
-> Okteto only let you create ingress rules for domains ending in `githubid.okteto.net`.
+> Okteto only let you create ingress rules for domains ending in `-[githubid].cloud.okteto.net`.
 
 Save and run the Voting App by executing:
 
