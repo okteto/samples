@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: vote
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "vote"
+    port: 8080
+  selector:
+    app: vote
