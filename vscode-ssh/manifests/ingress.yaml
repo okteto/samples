@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: vote
+  annotations:
+    kubernetes.io/ingress.class: nginx  
+spec:
+  rules:
+  - host: vote-cindy.cloud.okteto.net
+    http:
+      paths:
+      - path: /
+        backend: 
+          serviceName: vote
+          servicePort: 8080
+  tls:
+  - hosts:
+    - vote-cindy.cloud.okteto.net
