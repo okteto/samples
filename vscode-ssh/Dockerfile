@@ -1,10 +1,5 @@
 # Using official python runtime base image
-FROM python:stretch
-
-# Configure SSH server
-RUN apt-get update && apt-get install -y openssh-server
-RUN mkdir /var/run/sshd
-EXPOSE 22
+FROM python:stretch as app
 
 # Install the application
 WORKDIR /usr/src/app
@@ -13,3 +8,12 @@ RUN pip install -r requirements.txt
 ADD . /usr/src/app
 EXPOSE 8080
 CMD ["python", "app.py"]
+
+FROM app as ssh
+
+# Configure SSH server
+RUN apt-get update && apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+RUN mkdir /root/.ssh
+EXPOSE 22
+
