@@ -1,5 +1,5 @@
 name: vote
-image: okteto/vote-ssh
+image: okteto/vote-ssh:dev
 command: [ "sh", "-c", "cp /etc/ssh-key/* /root/.ssh && /usr/sbin/sshd -D" ]
 workdir: /usr/src/app
 forward:
