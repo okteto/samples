@@ -1,4 +1,4 @@
-# Using official golang runtime base image
+# Using official python runtime base image
 FROM python:stretch
 
 # Configure SSH server
