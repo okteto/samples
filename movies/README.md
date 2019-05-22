@@ -110,7 +110,7 @@ In your IDE edit the file `frontend/src/App.jsx` and change the `Okteflix` text 
 
 Go back to the browser, and cool! Your changes are automatically live with no need to refresh your browser. Everything happened in the cluster but no commit or push was required 😎!
 
-<p align="center"><img src="images/okteflix.gif" width="650" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/okteto/cloud-samples/master/movies/images/okteflix.gif" width="650" /></p>
 
 ## Step 5: Deploy your application
 
