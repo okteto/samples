@@ -122,4 +122,4 @@ Press `ctrl + c` and `ctrl + d` to go back to your local terminal at the `fronte
 $ okteto run okteto/movies:frontend
 ```
 
-This command replaces your Okteto Environment by a service running `okteto/movies:frontend`. If you want to use another docker image, you will need to build and push it to a public docker registry. (*[Contact us](mailto:sales@okteto.com?Subject=Support for private images)  if you're interested in support for private images*).
+This command replaces your Okteto Environment by a service running `okteto/movies:frontend`. If you want to use another docker image, you will need to build and push it to a public docker registry. (*[Contact us](mailto:sales@okteto.com?Subject=Support%20for%20private%20images)  if you're interested in support for private images*).

@@ -1,6 +1,6 @@
-# Voting App deployed with raw Kubernetes manifests and integrated with VS Code Remote Development
+# VS Code Remote Development with Kubernetes
 
-This example shows how to leverage [Okteto](https://cloud.okteto.com) to develop a python app directly in the cloud using VS Code Remote Development.
+This example shows how to leverage [Okteto](https://okteto.com) to develop a python app directly in the cloud using VS Code Remote Development.
 
 ## Step 1: Install the Okteto CLI
 
@@ -110,4 +110,4 @@ Go to the browser again and reload the page. Your changes were applied instantly
 
 We explained the advantages of developing directly in Kubernetes while keeping the same developer experience than working on a local machine. Working on the Cloud is always better. You don't work on your spreadsheets and listen to media files locally, do you? Stop dealing with local environments and become a Cloud Native Developer today 😎!
 
-> Interested in improving your Kubernetes and Docker development workflows? Contact Okteto to see how to install our platform in your own infrastructure.
+> Interested in improving your Kubernetes and Docker development workflows? [Contact us](mailto:sales@okteto.com?Subject=Improve%20my%20development%20workflow) to see how to install our platform in your own infrastructure.
