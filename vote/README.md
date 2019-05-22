@@ -112,4 +112,4 @@ $ okteto run <hub-user>\vote
 
 After a couple of seconds, your application will be ready. Go back to the browser and reload the page to see your new docker container up and running. 
 
-> `okteto run` only supports images from public docker repositories.[Contact us](mailto:sales@okteto.com?Subject=Support for private images) if you're interested in support for private images
+> `okteto run` only supports images from public docker repositories. [Contact us](mailto:sales@okteto.com?Subject=Support%20for%20private%20images) if you're interested in support for private images

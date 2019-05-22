@@ -110,7 +110,7 @@ In your IDE edit the file `frontend/src/App.jsx` and change the `Okteflix` text 
 
 Go back to the browser, and cool! Your changes are automatically live with no need to refresh your browser. Everything happened in the cluster but no commit or push was required 😎!
 
-<p align="center"><img src="images/okteflix.gif" width="650" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/okteto/cloud-samples/master/movies/images/okteflix.gif" width="650" /></p>
 
 ## Step 5: Deploy your application
 
@@ -122,4 +122,4 @@ Press `ctrl + c` and `ctrl + d` to go back to your local terminal at the `fronte
 $ okteto run okteto/movies:frontend
 ```
 
-This command replaces your Okteto Environment by a service running `okteto/movies:frontend`. If you want to use another docker image, you will need to build and push it to a public docker registry. (*[Contact us](mailto:sales@okteto.com?Subject=Support for private images)  if you're interested in support for private images*).
+This command replaces your Okteto Environment by a service running `okteto/movies:frontend`. If you want to use another docker image, you will need to build and push it to a public docker registry. (*[Contact us](mailto:sales@okteto.com?Subject=Support%20for%20private%20images)  if you're interested in support for private images*).

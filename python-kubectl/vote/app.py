@@ -23,11 +23,15 @@ def hello():
         vote = request.form['vote']
         vote = option_a if vote == "a" else option_b
         votes[vote] = votes[vote] + 1
+    with open('/var/run/secrets/kubernetes.io/serviceaccount/namespace', 'r') as fp:
+        namespace = fp.read()
+
     resp = make_response(render_template(
         'index.html',
         option_a=option_a,
         option_b=option_b,
         hostname=hostname,
+        namespace=namespace,
         votes_a=votes[option_a],
         votes_b=votes[option_b],
     ))

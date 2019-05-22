@@ -121,4 +121,4 @@ $ gcloud beta run deploy --image gcr.io/[project-id]/vote
 
 ## Conclusion
 
-We have shown how easy is to deploy applications in Cloud Run, and how to use Okteto to do efficient development in the cloud. And what it is even more awesome, is that you have been able to efficiently develop, build and deploy a Docker-based application without typing a single docker command, thanks to the combined powers of Cloud Run and Okteto!
+We have shown how easy is to deploy applications in Cloud Run, and how to [use Okteto](https://okteto.com) to do efficient development in the cloud. And what it is even more awesome, is that you have been able to efficiently develop, build and deploy a Docker-based application without typing a single docker command, thanks to the combined powers of Cloud Run and [Okteto](https://okteto.com)!
