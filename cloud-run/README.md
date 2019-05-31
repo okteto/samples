@@ -60,7 +60,7 @@ The first thing we need to do is install the Okteto CLI by running the command b
 MacOS/Linux
 
 ```console
-curl https://get.okteto.com -sSfL | sudo sh
+curl https://get.okteto.com -sSfL | sh
 ```
 
 Windows
