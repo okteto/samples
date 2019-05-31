@@ -9,7 +9,7 @@ Install the Okteto CLI by running the following command in your local terminal:
 MacOS/Linux
 
 ```console
-curl https://get.okteto.com -sSfL | sudo sh
+curl https://get.okteto.com -sSfL | sh
 ```
 
 Windows
