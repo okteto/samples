@@ -44,7 +44,7 @@ Get a local version of the sample application by executing the following command
 
 ```console
 git clone https://github.com/okteto/cloud-samples
-cd cloud-samples/python-kubectl
+cd cloud-samples/python
 ```
 
 You now have a functioning git repository that contains a simple python application and a `requirements.txt`, which is used by Python’s dependency manager, `pip`.
