@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vote
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
 spec:
   replicas: 1
   selector:
@@ -13,5 +15,5 @@ spec:
         app: vote
     spec:
       containers:
-      - image: okteto/vote:1.3
+      - image: okteto/vote:latest
         name: vote
