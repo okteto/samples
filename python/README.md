@@ -19,26 +19,9 @@ Windows:
 $ wget https://downloads.okteto.com/cli/okteto-Windows-x86_64 -OutFile c:\windows\system32\okteto.exe
 ```
 
-If you want to use your own Kubernetes cluster, jump to Step 4.
+This example works in any Kubernetes cluster (Okteto reads your local Kubernetes credentials), but we recommend to use https://cloud.okteto.com to follow this guide.
 
-## Step 2: Login from the Okteto CLI
-
-```console
-$ okteto login
-```
-
-The `login` command will automatically create an account for you in [Okteto](https://cloud.okteto.com). It will also create `kubectl` credentials configured to work in our multi-tenant cluster. These credentials have network policies, quotas, pod security policies, admission webhooks, roles, role bindings and limit ranges to control what you can do in your Okteto namespaces.
-
-## Step 3: Switch to Kubernetes namespace and context
-
-```console
-$ okteto namespace
-```
-
-The `namespace` command helps you easily switch between Kubernetes namespaces. If no namespace is provided, the command will switch to your Okteto personal namespace.
-
-
-## Step 4: Deploy the sample app
+## Step 2: Deploy the sample app
 
 Get a local version of the sample application by executing the following commands in your local terminal:
 
@@ -62,7 +45,7 @@ kubectl apply -f manifests
 > Wait for one or two minutes until the application is running. If you are using the Okteto cluster, you can access the app at https://vote-[githubid].cloud.okteto.net. If not, it will be available at https://localhost:8080.
 
 
-## Step 5: Create your Okteto Environment
+## Step 3: Create your Okteto Environment
 
 Now start your Okteto Environment by running the following command:
 
@@ -90,7 +73,7 @@ $ okteto up
  * Debugger PIN: 899-835-619
  ```
 
-## Step 6: Develop directly in the cloud
+## Step 4: Develop directly in the cloud
 
 Now things get more exciting. Open `vote/app.py` in your favorite local IDE and modify the `getOptions` function with the following code, and save your file:
 
@@ -114,7 +97,7 @@ Go back to the terminal and notice that flask already detected the code changes 
 Go back to the browser, and reload the page. Notice how your changes are instantly applied. No commit, build or push required 😎! 
 
 
-## Step 7: Cleanup
+## Step 5: Cleanup
 
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
 
