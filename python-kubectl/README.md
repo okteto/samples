@@ -7,14 +7,7 @@ This example is deployed using raw Kubernetes manifests.
 
 Install the Okteto CLI by running the following command in your local terminal:
 
-MacOS:
-
-```console
-$ brew tap okteto/cli
-$ brew install okteto
-```
-
-Linux:
+MacOS/Linux:
 
 ```console
 $ curl https://get.okteto.com -sSfL | sh
