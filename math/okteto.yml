@@ -1,5 +1,0 @@
-name: curly-river
-image: okteto/golang:1
-command:
-- bash
-workdir: /go/src/app

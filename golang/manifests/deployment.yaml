@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: math
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: math
+  template:
+    metadata:
+      labels:
+        app: math
+    spec:
+      containers:
+      - image: okteto/math:latest
+        name: math

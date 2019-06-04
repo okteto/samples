@@ -1,0 +1,10 @@
+version: "3.4"
+services:
+  dev:
+    image: okteto/payroll:0.1-dev
+    build: 
+      context: .
+      target: builder
+  prod:
+    image: okteto/payroll:0.1
+    build: .

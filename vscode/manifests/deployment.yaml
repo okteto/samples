@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vote
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vote
+  template:
+    metadata:
+      labels:
+        app: vote
+    spec:
+      containers:
+      - image: okteto/vote:latest
+        name: vote
+        volumeMounts:
+        - name: ssh
+          mountPath: "/etc/ssh-key"
+      volumes:
+      - name: ssh
+        secret:
+          secretName: ssh-public

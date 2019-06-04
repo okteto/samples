@@ -1,4 +1,0 @@
-name: vote
-image: okteto/dev-cloud-run:latest
-workdir: /src
-command: ["python", "app.py"]
