@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: vote
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:

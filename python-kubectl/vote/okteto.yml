@@ -1,4 +1,0 @@
-name: vote
-image: okteto/dev-k8s-vote:latest
-command: ["python", "app.py"]
-workdir: /src

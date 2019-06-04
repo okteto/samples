@@ -1,0 +1,5 @@
+name: vote
+workdir: /src
+command: ["python", "app.py"]
+forward:
+  - 8080
