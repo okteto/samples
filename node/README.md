@@ -40,7 +40,7 @@ Now that you have the application code in your local machine, let's create Oktet
 Move to the movies front-end code directory:
 
 ```console
-$ cd samples/movies/frontend
+$ cd samples/node/frontend
 ```
 
 From the frontend's root directory, launch the following command:
@@ -51,7 +51,13 @@ $ okteto up
 
 The `okteto up` command will automatically start an Okteto Environment. It will also start a *file synchronization service* to keep your changes up to date between your local filesystem and your Okteto Environment, without rebuilding containers (eliminating the docker build/push/pull/redeploy cycle).
 
-<p align="center"><img src="images/okteto-up.png" width="750" /></p>
+```
+$ okteto up
+ ✓  Okteto Environment activated
+ ✓  Files synchronized
+ ✓  Your Okteto Environment is ready
+    Name:     movies-frontend
+```
 
 Once the Okteto Environment is ready, the Okteto Terminal will automatically open. Use it to run your frontend with the same flow you would have locally:
 
@@ -63,11 +69,7 @@ The frontend of your application is now ready to be tested. You can check it by 
 
 > Note that Okteto creates a public HTTPS endpoint forwarding to the port 8080 of your application.
 
-<p align="center"><img src="images/movies-frontend.jpg" width="550" /></p>
-
-You can also check your environments by logging into [Okteto](https://cloud.okteto.com) and clicking on the application’s endpoint:
-
-<p align="center"><img src="images/okteto-ui.png" width="550" /></p>
+<p align="center"><img src="frontend/static/movies-frontend.jpg" width="550" /></p>
 
 ### Step 3.2: Launch API environment
 
@@ -92,8 +94,6 @@ Go back to your browser and refresh the page. You'll see how the front-end is no
 
 Congratulations, you just deployed your first multi-service application using Okteto 🚀! 
 
-<p align="center"><img src="images/okteto-ui-full.png" width="550" /></p>
-
 ## Step 3: Develop directly in the cloud
 
 Now things get even more exciting. You can now develop *directly in the cluster*. The API service and database will be available at all times. No need to mock services nor use any kind of redirection.
@@ -102,7 +102,7 @@ In your IDE edit the file `frontend/src/App.jsx` and change the `Okteflix` text 
 
 Go back to the browser, and cool! Your changes are automatically live with no need to refresh your browser. Everything happened in the cluster but no commit or push was required 😎!
 
-<p align="center"><img src="https://raw.githubusercontent.com/okteto/cloud-samples/master/movies/images/okteflix.gif" width="650" /></p>
+<p align="center"><img src="frontend/static/okteflix.gif" width="650" /></p>
 
 ## Step 4: Deploy your application
 
