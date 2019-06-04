@@ -61,7 +61,7 @@ $ okteto up
  ✓  Your Okteto Environment is ready
     Name:     math
 
-bash-4.4#
+okteto>
 ```
 
 Once the Okteto Environment is ready, start your application by executing the following command in your Okteto Terminal:
