@@ -4,9 +4,9 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-hot-loader": "^4.3.12"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -29,7 +29,7 @@
     "url-loader": "1.1.1",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "git://github.com/rlamana/webpack-dev-server#hmr-use-location-port"
+    "webpack-dev-server": "^3.5.1"
   },
   "scripts": {
     "start": "yarn install && yarn devel",

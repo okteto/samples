@@ -1,5 +1,5 @@
+import { hot } from 'react-hot-loader/root';
 import React, { Component }  from 'react';
-import { hot } from 'react-hot-loader';
 
 import userAvatarImage from './assets/images/user.jpg';
 import movieBackground from './assets/images/movie-bg.jpg';
@@ -306,4 +306,4 @@ class ListToggle extends Component {
   }
 }
 
-export default hot(module)(App);
+export default hot(App);
