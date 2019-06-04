@@ -1,4 +1,4 @@
-# Voting App
+# Voting App deployed with Helm
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a python app directly in the cloud.
 

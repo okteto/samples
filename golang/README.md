@@ -1,4 +1,4 @@
-# Math App
+# Golang Application with Okteto
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a Go application directly in the cloud.
 
