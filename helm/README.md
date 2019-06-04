@@ -1,12 +1,8 @@
 # Voting App
 
-Example helm + python app
+This example shows how to leverage [Okteto](https://okteto.com) to develop a python app directly in the cloud.
 
-A simple helm chart that deploys a Python app (using Flask) to demo the power of [okteto](https:/okteto.com).
-
-This example works in any Kubernetes cluster. Cloud Native Development provides more value in remote Kubernetes clusters, but in order to make it simple to follow this guide, we recommend to use Docker for Mac (with Kubernetes support) or [minikube](https://github.com/kubernetes/minikube). 
-
-For this example you also need to have helm installed and configured in your cluster. 
+This example is deployed using Helm.
 
 
 ## Deploy the chart
