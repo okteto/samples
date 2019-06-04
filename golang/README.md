@@ -1,6 +1,7 @@
 # Math App
 
-This example shows how to leverage [Okteto](https://okteto.com) to develop a python app directly in the cloud.
+This example shows how to leverage [Okteto](https://okteto.com) to develop a Go application directly in the cloud.
+
 This example is deployed using raw Kubernetes manifests.
 
 ## Step 1: Install the Okteto CLI
