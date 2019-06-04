@@ -72,7 +72,7 @@ okteto> go run main.go
 
 ## Step 4: Develop directly in the cloud
 
-Now things get more exciting. Edit the file `math/main.go` and switch the word `mult` by `times` at line 43. Save your changes. Cancel the execution of `go run main.go` from your Okteto Terminal by pressing `ctrl + c`. Run your tests to check that everything is fine with your changes:
+Now things get more exciting. Edit the file `main.go` and switch the word `mult` by `times` at line 43. Save your changes. Cancel the execution of `go run main.go` from your Okteto Terminal by pressing `ctrl + c`. Run your tests to check that everything is fine with your changes:
 
 ```console
 okteto> go test ./...
