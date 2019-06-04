@@ -24,14 +24,12 @@ This example works in any Kubernetes cluster (Okteto reads your local Kubernetes
 
 ## Step 2: Deploy the sample app
 
-Get a local version of the sample application by executing the following commands in your local terminal:
+Get a local version of the golang sample application by executing the following commands in your local terminal:
 
 ```console
 git clone https://github.com/okteto/samples
 cd samples/golang
 ```
-
-You now have a functioning git repository that contains a simple golang application. Now start your Okteto Environment by running the following command:
 
 In the `manifest/` directory you also have raw Kubernetes manifests that we will use in this guide to deploy the application in the cluster. Okteto works however independently of your common deployment practices or tools.
 
