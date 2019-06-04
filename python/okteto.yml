@@ -1,5 +1,6 @@
 name: vote
+image: okteto/vote:latest
 workdir: /src
 command: ["python", "app.py"]
 forward:
-  - 8080
+  - 8080:8080

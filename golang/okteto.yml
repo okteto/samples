@@ -1,0 +1,5 @@
+name: math
+command: ["bash"]
+workdir: /go/src/app
+forward:
+  - 8080:8080

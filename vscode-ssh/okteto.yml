@@ -1,6 +1,0 @@
-name: vote
-image: okteto/vote-ssh:dev
-command: [ "sh", "-c", "cp /etc/ssh-key/* /root/.ssh && /usr/sbin/sshd -D" ]
-workdir: /usr/src/app
-forward:
-  - 22000:22

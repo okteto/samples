@@ -2,14 +2,15 @@
 
 **Maintainers:** [Okteto](https://github.com/okteto)
 
-This repository contains examples of how to develop applications directly in the cloud using [Okteto](https://cloud.okteto.com).  
+This repository contains examples of how to develop applications directly in your Kubernetes cluster using [okteto](https://okteto.com), different platforms and deployment technologies.  
 
 ## Examples
 
-1. [Golang app](math/README.md)
-1. [Python app accesing Redis](vote/README.md)
-1. [React/Webpack app + Node.js API + MongoDB](movies/README.md)
-1. [Accelerate Serverless Development with Cloud Run and Okteto](cloud-run/README.md)
-1. [Python app deployed with raw Kubernetes manifests](python-kubectl/README.md)
-1. [Python app integrated with VS Code Remote Development](vscode-ssh/README.md)
-
+1. [Python](python/README.md)
+1. [Golang](golang/README.md)
+1. [Node.js](node/README.md)
+1. [Ruby](ruby/README.md)
+1. [Java](java/README.md)
+1. [Helm](helm/README.md)
+1. [Cloud Run](cloud-run/README.md)
+1. [VS Code Remote Development](vscode/README.md)
