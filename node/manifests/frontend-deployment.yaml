@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movies-frontend
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movies-frontend
+  template:
+    metadata:
+      labels:
+        app: movies-frontend
+    spec:
+      containers:
+      - image: okteto/movies:frontend
+        name: movies-frontend
