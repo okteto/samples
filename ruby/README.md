@@ -1,4 +1,4 @@
-# Ruby on rails web app deployed with raw Kubernetes manifests
+# Ruby on Rails Sample App
 
 This example shows how to develop a Ruby on Rails web app with [okteto](https://okteto.com). It's based on [Ruby on Rails' getting started guide](https://guides.rubyonrails.org/getting_started.html).
 

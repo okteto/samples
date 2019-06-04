@@ -1,4 +1,4 @@
-# Python App with Okteto
+# Python Sample App
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a python app directly in the cloud.
 This example is deployed using raw Kubernetes manifests.

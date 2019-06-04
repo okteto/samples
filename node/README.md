@@ -1,4 +1,4 @@
-# Movies App
+# Node + React Sample App
 
 This example shows you how to build a full stack application directly in the cloud using [Okteto](https://cloud.okteto.com). 
 
@@ -33,7 +33,7 @@ Clone the samples repository:
 $ git clone https://github.com/okteto/samples
 ```
 
-Now that you have the application code in your local machine, let's create an Okteto Environments to run the application directly in the cluster.
+Now that you have the application code in your local machine, let's create Okteto Environments to run the application directly in the cluster.
 
 ### Step 3.1: Launch front-end environment
 

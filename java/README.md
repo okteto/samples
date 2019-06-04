@@ -1,4 +1,4 @@
-# Payroll
+# Java Sample App
 
 This example shows how to develop a Spring Boot Java application with [okteto](https://okteto.com). It's based on [Spring's gs-rest-service example](https://github.com/spring-guides/gs-rest-service).
 
