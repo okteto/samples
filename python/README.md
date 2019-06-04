@@ -75,7 +75,7 @@ $ okteto up
 
 ## Step 4: Develop directly in the cloud
 
-Now things get more exciting. Open `vote/app.py` in your favorite local IDE and modify the `getOptions` function with the following code, and save your file:
+Now things get more exciting. Open `app.py` in your favorite local IDE and modify the `getOptions` function with the following code, and save your file:
 
 ```python
 def getOptions():
