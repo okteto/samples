@@ -22,9 +22,19 @@ Clone the samples repository:
 $ git clone https://github.com/okteto/samples
 ```
 
-Now that you have the application code in your local machine, let's create Okteto Environments to run the application directly in the cluster.
+In the `manifest/` directory you also have raw Kubernetes manifests that we will use in this guide to deploy the application in the cluster. Okteto works however independently of your common deployment practices or tools.
 
-### Step 3.1: Launch front-end environment
+> If you don't have `kubectl` installed, follow this [guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
+
+Run the Math app by executing:
+
+```console
+kubectl apply -f manifests
+```
+
+> Wait for one or two minutes until the application is running. You can access the Movies app at https://localhost:8080.
+
+### Step 3.1: Create your Okteto Environment for the frontend
 
 Move to the movies front-end code directory:
 
@@ -40,7 +50,7 @@ $ okteto up
 
 The `okteto up` command will automatically start an Okteto Environment. It will also start a *file synchronization service* to keep your changes up to date between your local filesystem and your Okteto Environment, without rebuilding containers (eliminating the docker build/push/pull/redeploy cycle).
 
-```
+```console
 $ okteto up
  ✓  Okteto Environment activated
  ✓  Files synchronized
