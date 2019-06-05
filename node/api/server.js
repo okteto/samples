@@ -6,10 +6,14 @@ const app = express();
 const url = 'mongodb://mongo:27017';
 const dbName = 'movies';
 
-mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
+mongo.connect(url, { 
+  useNewUrlParser: true,
+  reconnectTries: 30,
+  reconnectInterval: 1000
+}, (err, client) => {
   if (err) {
-    console.error(err);
-    return
+    console.error('Error connecting to mongodb', err);
+    process.exit(1);
   }
 
   console.log(`Connected to ${url}`);
@@ -24,7 +28,7 @@ mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
         if (err){
           console.log(`failed to query movies: ${err}`)
           res.json([]);
-          return
+          return;
         }
          res.json(results);
       });
@@ -35,7 +39,7 @@ mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
         if (err){
           console.log(`failed to query movies: ${err}`)
           res.json([]);
-          return
+          return;
         }
 
         res.json(results);
@@ -47,7 +51,7 @@ mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
         if (err){
           console.log(`failed to query movies: ${err}`)
           res.json([]);
-          return
+          return;
         }
 
         res.json(results);
@@ -76,7 +80,7 @@ var createNewEntries = function(collection, entries) {
     doc._id = doc.id;
     collection.insertOne(doc, (err, res) => {
       if (err) {
-        if (err.code != 11000){
+        if (err.code != 11000) {
           console.log(`error while writing to mongo: ${err}`);
         } else {
           var query = { _id: doc.id };
