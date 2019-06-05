@@ -1,0 +1,5 @@
+name: blog
+image: okteto/blog:latest
+command:
+- bash
+workdir: /usr/src/app
