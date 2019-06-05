@@ -1,10 +1,14 @@
 # Ruby on Rails Sample App
 
-This example shows how to develop a Ruby on Rails web app with [okteto](https://okteto.com). It's based on [Ruby on Rails' getting started guide](https://guides.rubyonrails.org/getting_started.html).
+This example shows how to leverage [Okteto](https://okteto.com) to develop a Ruby on Rails Sample App directly in the cloud. The Ruby on Rails Sample App is deployed using raw Kubernetes manifests.
 
-This example works in any Kubernetes cluster. Cloud Native Development provides more value in remote Kubernetes clusters, but in order to make it simple to follow this guide, we recommend to use Docker for Mac (with Kubernetes support) or [minikube](https://github.com/kubernetes/minikube). 
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/ruby/) to deploy the Ruby on Rails Sample App in our [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
 
-## Deploy the blog service
+## Step 1: Install the Okteto CLI
+
+Install the Okteto CLI by following our [installation guides](https://github.com/okteto/okteto/blob/master/docs/installation.md).
+
+## Step 2: Deploy the blog service
 
 Clone the repository and go to the rails-kubectl folder.
 
@@ -18,7 +22,7 @@ Deploy the blog application by using the following command:
 $ kubectl apply -f manifests
 ```
 
-## Cloud Native Development
+## Step 3: Cloud Native Development
 
 In order to activate your Cloud Native Development, execute:
 
@@ -53,4 +57,10 @@ Browse again to your application, it should load without any issues. At this poi
 
 To keep testing the power of cloud native development, continue with the rest of the [getting started guide](https://guides.rubyonrails.org/getting_started.html#adding-a-second-model). Keep creating and editing files in your IDE. 
 
-Happy coding!
+## Step 4: Cleanup
+
+Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
+
+```console
+kubectl delete -f manifests
+```

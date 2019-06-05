@@ -1,26 +1,12 @@
 # Golang Sample App
 
-This example shows how to leverage [Okteto](https://okteto.com) to develop a Go application directly in the cloud.
+This example shows how to leverage [Okteto](https://okteto.com) to develop a Golang Sample App directly in the cloud. The Golang Sample App is deployed using raw Kubernetes manifests.
 
-This example is deployed using raw Kubernetes manifests.
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/golang/) to deploy the Golang Sample App in our [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
 
 ## Step 1: Install the Okteto CLI
 
-Install the Okteto CLI by running the following command in your local terminal:
-
-MacOS/Linux:
-
-```console
-$ curl https://get.okteto.com -sSfL | sh
-```
-
-Windows:
-
-```console
-$ wget https://downloads.okteto.com/cli/okteto-Windows-x86_64 -OutFile c:\windows\system32\okteto.exe
-```
-
-This example works in any Kubernetes cluster (Okteto reads your local Kubernetes credentials), but we recommend to use https://cloud.okteto.com to follow this guide.
+Install the Okteto CLI by following our [installation guides](https://github.com/okteto/okteto/blob/master/docs/installation.md).
 
 ## Step 2: Deploy the sample app
 
