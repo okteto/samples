@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strconv"
 
 	"github.com/astaxie/beego"
@@ -14,6 +15,7 @@ func main() {
 	   /product/6/23
 	   ...
 	*/
+	fmt.Println("Starting beego server...")
 	beego.Router("/:operation/:num1:int/:num2:int", &mainController{})
 	beego.Run()
 }
