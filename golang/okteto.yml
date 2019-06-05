@@ -1,4 +1,5 @@
 name: math
+image: okteto/math:latest
 command: ["bash"]
 workdir: /go/src/app
 forward:
