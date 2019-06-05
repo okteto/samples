@@ -9,13 +9,13 @@ This example works in any Kubernetes cluster. Cloud Native Development provides 
 Clone the repository and go to the rails-kubectl folder.
 
 ```console
-git clone https://github.com/okteto/samples
-cd samples/ruby
+$ git clone https://github.com/okteto/samples
+$ cd samples/ruby
 ```
 
 Deploy the blog application by using the following command:
 ```console
-kubectl apply -f manifests
+$ kubectl apply -f manifests
 ```
 
 ## Cloud Native Development
@@ -23,8 +23,8 @@ kubectl apply -f manifests
 In order to activate your Cloud Native Development, execute:
 
 ```console
-cd blog
-okteto up
+$ cd blog
+$ okteto up
 ```
 
 The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers. The environment already includes the ruby dev tools, and will automatically forward port 8080 to your local machine.
@@ -32,7 +32,7 @@ The `okteto up` command will start a remote development environment that automat
 Now execute the command below in the Okteto terminal. The command will start your service and reload it automatically after every successful change.
 
 ```console
-rails s
+$ rails s
 ```
 
 Once the server is running, browse to the application at http://localhost:8080 and you'll see an error message similar to this one in your browser:
