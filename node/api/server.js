@@ -6,7 +6,11 @@ const app = express();
 const url = 'mongodb://mongo:27017';
 const dbName = 'movies';
 
-mongo.connect(url, { useNewUrlParser: true }, (err, client) => {
+mongo.connect(url, { 
+  useNewUrlParser: true,
+  reconnectTries: 30,
+  reconnectInterval: 1000
+}, (err, client) => {
   if (err) {
     console.error('Error connecting to mongodb', err);
     process.exit(1);
