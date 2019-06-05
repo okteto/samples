@@ -44,7 +44,7 @@ This is because we have a migration pending. Press `ctrl + c` and run the follow
 
 ```console
 $ rails db:migrate
-$ rails s -e development
+$ rails s
 ```
 
 Notice that even though you don't have the application running locally (and you don't have rails installed), the command still runs successfully. This is because okteto is running the command directly in your dev environment in the browser!
