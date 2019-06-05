@@ -1,8 +1,14 @@
 # Java Sample App
 
-This example shows how to develop a Spring Boot Java application with [okteto](https://okteto.com). It's based on [Spring's gs-rest-service example](https://github.com/spring-guides/gs-rest-service).
+This example shows how to leverage [Okteto](https://okteto.com) to develop a Java Sample App directly in the cloud. The Python Sample App is deployed using raw Kubernetes manifests. It's based on [Spring's gs-rest-service example](https://github.com/spring-guides/gs-rest-service).
 
-This example works in any Kubernetes cluster. Cloud Native Development provides more value in remote Kubernetes clusters, but in order to make it simple to follow this guide, we recommend to use Docker for Mac (with Kubernetes support) or [minikube](https://github.com/kubernetes/minikube). 
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/java/) to deploy the Java Sample App in our [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
+
+
+## Step 1: Install the Okteto CLI
+
+Install the Okteto CLI by following our [installation guides](https://github.com/okteto/okteto/blob/master/docs/installation.md).
+
 
 ## Deploy the payroll service
 
