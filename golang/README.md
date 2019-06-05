@@ -13,8 +13,8 @@ Install the Okteto CLI by following our [installation guides](https://github.com
 Get a local version of the golang sample application by executing the following commands in your local terminal:
 
 ```console
-git clone https://github.com/okteto/samples
-cd samples/golang
+$ git clone https://github.com/okteto/samples
+$ cd samples/golang
 ```
 
 In the `manifest/` directory you also have raw Kubernetes manifests that we will use in this guide to deploy the application in the cluster. Okteto works however independently of your common deployment practices or tools.
@@ -24,15 +24,12 @@ In the `manifest/` directory you also have raw Kubernetes manifests that we will
 Run the Math app by executing:
 
 ```console
-kubectl apply -f manifests
+$ kubectl apply -f manifests
 ```
-
-> Wait for one or two minutes until the application is running. You can access the Math app at https://localhost:8080/mult/3/4.
-
 
 ## Step 3: Create your Okteto Environment
 
-Now start your Okteto Environment by running the following command:
+With the app deployed, you can start your Okteto Environment by running the following command:
 
 ```console
 okteto up
@@ -55,6 +52,8 @@ Once the Okteto Environment is ready, start your application by executing the fo
 ```console
 okteto> go run main.go
 ```
+
+You can now access the Math app at https://localhost:8080/mult/3/4.
 
 ## Step 4: Develop directly in the cloud
 
