@@ -24,18 +24,15 @@ In the `manifest/` directory you also have raw Kubernetes manifests that we will
 
 > If you don´t have `kubectl` installed, follow this [guide](https://kubernetes.io/docs/tasks/tools/install-kubectl/).
 
-Run the voting app by executing:
+Run the Voting app by executing:
 
 ```console
 kubectl apply -f manifests
 ```
 
-Wait for one or two minutes until the application is running. You can access the app at https://localhost:8080.
-
-
 ## Step 3: Create your Okteto Environment
 
-Now start your Okteto Environment by running the following command:
+With the app deployed, you can start your Okteto Environment by running the following command:
 
 ```console
 okteto up
@@ -60,6 +57,8 @@ $ okteto up
  * Debugger is active!
  * Debugger PIN: 899-835-619
  ```
+
+You can now access the Voting app at https://localhost:8080.
 
 ## Step 4: Develop directly in the cloud
 
