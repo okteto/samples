@@ -1,6 +1,6 @@
 FROM node:10
 
-WORKDIR /usr/src/app
+WORKDIR /src
 
 COPY package.json yarn.lock ./
 RUN yarn install

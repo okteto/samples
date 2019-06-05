@@ -74,7 +74,6 @@ module.exports = {
     disableHostCheck: true,
     hot: true,
     inline: true,
-    sockPort: '0', // To use `location.port` from client.
     watchOptions: {
       poll: true
     },
