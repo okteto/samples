@@ -23,18 +23,19 @@ kubectl apply -f manifests
 In order to activate your Cloud Native Development, execute:
 
 ```console
+cd blog
 okteto up
 ```
 
-The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers. The environment already includes the ruby dev tools, and will automatically forward port 3000 to your local machine.
+The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers. The environment already includes the ruby dev tools, and will automatically forward port 8080 to your local machine.
 
 Now execute the command below. The command will start your service and reload it automatically after every successful change.
 
 ```console
-rails s -e development
+okteto> rails s -e development
 ```
 
-Once the server is running, browse to the application at http://localhost:3000 and you'll see an error message similar to this one in your browser:
+Once the server is running, browse to the application at http://localhost:8080 and you'll see an error message similar to this one in your browser:
 ```console
 Migrations are pending. To resolve this issue, run: bin/rails db:migrate RAILS_ENV=development 
 ```
@@ -42,8 +43,8 @@ Migrations are pending. To resolve this issue, run: bin/rails db:migrate RAILS_E
 This is because we have a migration pending. Press `ctrl + c` and run the following commands from your terminal:
 
 ```console
-rails db:migrate
-rails s -e development
+okteto>  rails db:migrate
+okteto>  rails s -e development
 ```
 
 Notice that even though you don't have the application running locally (and you don't have rails installed), the command still runs successfully. This is because okteto is running the command directly in your dev environment in the browser!
