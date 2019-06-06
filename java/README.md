@@ -2,7 +2,7 @@
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a Java Sample App directly in the cloud. The Python Sample App is deployed using raw Kubernetes manifests. It's based on [Spring's gs-rest-service example](https://github.com/spring-guides/gs-rest-service).
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/java/) to deploy the Java Sample App in our [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. You can also deploy it in the [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
 
 
 ## Step 1: Install the Okteto CLI
