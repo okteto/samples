@@ -34,13 +34,7 @@ okteto up
 
 The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers (eliminating the **docker build/push/pull/redeploy** cycle). 
 
-This development environment includes java dev tools (e.g. gradle) and it's configured to  automatically compile your code directly on the cluster every time you make a change. It will also start forwarding port 8080 to your local machine.
-
-On a second terminal screen execute the command below. This will run the `boot` script as defined by the user on [`okteto.yml`](payroll/okteto.yml). The boot script will run `gradle bootRun` directly in the cluster. The command will start your service and reload it automatically after every successful compilation.
-
-```console
-okteto run boot
-```
+This development environment includes java dev tools (e.g. gradle) and it's configured to  automatically start the application by running `gradle bootRun`, configured to reload the process after a successful compilation.  It will also start forwarding port 8080 to your local machine.
 
 Verify that everything is up and running by calling the `/employees` endpoint from your local machine:
 ```console
@@ -88,6 +82,12 @@ curl http://localhost:8080/employees/5
     this.employees.put(5, new Employee(5, "Alexandra Greyson"));
 ...
  ```
+
+Open a second terminal in the same folder, and compile your new code with the command below. This command will compile the code directly in the Okteto development, so we can benefit from the gradle's hot reloading capabilities:
+
+```console
+$ okteto exec -- gradle build
+```
 
  Go back to your terminal and call API again:
 ```console
