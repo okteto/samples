@@ -2,7 +2,7 @@
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a Python Sample App directly in the cloud. The Python Sample App is deployed using raw Kubernetes manifests.
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/python/) to deploy the Python Sample App in our [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/python/) to deploy the Python Sample App in our [Free Trial Okteto Kubernetes Cluster](https://cloud.okteto.com).
 
 
 ## Step 1: Install the Okteto CLI
@@ -35,18 +35,14 @@ kubectl apply -f manifests
 With the app deployed, you can start your Okteto Environment by running the following command:
 
 ```console
-okteto up
-
-```
-The `okteto up` command will automatically start an Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment.
-
-```console
 $ okteto up
  ✓  Okteto Environment activated
  ✓  Files synchronized
  ✓  Your Okteto Environment is ready
-    Name:     vote
-
+    Namespace: cindy
+    Name:      vote
+    Forward:   8080 -> 8080
+    
  * Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
@@ -58,7 +54,9 @@ $ okteto up
  * Debugger PIN: 899-835-619
  ```
 
-You can now access the Voting app at https://localhost:8080.
+The `okteto up` command will automatically start an Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment.
+
+You can now access the Voting app at http://localhost:8080.
 
 ## Step 4: Develop directly in the cloud
 
@@ -90,4 +88,6 @@ Cancel the `okteto up` command by pressing `ctrl + c` and run the following comm
 
 ```console
 kubectl delete -f manifests
+deployment.apps "vote" deleted
+service "vote" deleted
 ```

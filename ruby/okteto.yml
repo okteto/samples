@@ -1,0 +1,6 @@
+name: blog
+image: okteto/blog:latest
+command: ["bash"]
+workdir: /usr/src/app
+forward:
+  - 8080:8080

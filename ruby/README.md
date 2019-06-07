@@ -2,13 +2,13 @@
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a Ruby on Rails Sample App directly in the cloud. The Ruby on Rails Sample App is deployed using raw Kubernetes manifests.
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. You can also deploy it in our [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. You can also deploy it in our [Free Trial Okteto Kubernetes Cluster](https://cloud.okteto.com).
 
 ## Step 1: Install the Okteto CLI
 
 Install the Okteto CLI by following our [installation guides](https://github.com/okteto/okteto/blob/master/docs/installation.md).
 
-## Step 2: Deploy the blog service
+## Step 2: Deploy the Rails Sample App
 
 Clone the repository and go to the rails-kubectl folder.
 
@@ -20,15 +20,23 @@ $ cd samples/ruby
 Deploy the blog application by using the following command:
 ```console
 $ kubectl apply -f manifests
-```
+deployment.apps "blog" created
+service "blog" created```
 
 ## Step 3: Cloud Native Development
 
 In order to activate your Cloud Native Development, execute:
 
 ```console
-$ cd blog
 $ okteto up
+ ✓  Okteto Environment activated
+ ✓  Files synchronized
+ ✓  Your Okteto Environment is ready
+    Namespace: cindy
+    Name:      blog
+    Forward:   8080 -> 8080
+
+root@blog-545d954cd5-96fh2:/usr/src/app#
 ```
 
 The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers. The environment already includes the ruby dev tools, and will automatically forward port 8080 to your local machine.
@@ -63,4 +71,6 @@ Cancel the `okteto up` command by pressing `ctrl + c` and run the following comm
 
 ```console
 kubectl delete -f manifests
+deployment.apps "blog" deleted
+service "blog" deleted
 ```

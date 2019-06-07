@@ -2,7 +2,7 @@
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a Python Sample App directly in the cloud using VS Code Remote Development. The Python Sample App is deployed using raw Kubernetes manifests.
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [blog post](https://medium.com/okteto/vs-code-remote-development-in-kubernetes-d7eef7cea4fd) to deploy the Python Sample App in our [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [blog post](https://medium.com/okteto/vs-code-remote-development-in-kubernetes-d7eef7cea4fd) to deploy the Python Sample App in our [FFree Trial Okteto Kubernetes Cluster](https://cloud.okteto.com).
 
 ## Step 1: Install the Okteto CLI
 
@@ -21,9 +21,11 @@ Run the Voting App by executing:
 
 ```console
 kubectl apply -f manifests
+deployment.apps "vote" created
+service "vote" created
 ```
 
-Wait for one or two minutes until the application is running. You can access it at https://localhost:8080.
+Wait for one or two minutes until the application is running. You can access it at http://localhost:8080.
 
 ## Step 3: Develop as a Cloud Native Developer
 
@@ -31,6 +33,14 @@ Now start your Okteto Environment by running the following command:
 
 ```console
 okteto up
+ ✓  Okteto Environment activated
+ ✓  Files synchronized
+ ✓  Your Okteto Environment is ready
+    Namespace: pchico83
+    Name:      vote
+    Forward:   8080 -> 8080
+               22000 -> 22
+
 ```
 
 The `okteto up` command will automatically start an Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment. Last but least, it exposes the container port 22 to localhost:22000 to integrate with VS Code Remote SSH Development.
@@ -64,10 +74,12 @@ Go to the browser again and reload the page. Your changes were applied instantly
 
 > We recommend to keep Git extensions locally. This way they use your local keys and you don´t need to install them remotely.
 
-## Step 5: Cleanup
+## Step 4: Cleanup
 
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
 
 ```console
 kubectl delete -f manifests
+deployment.apps "vote" deleted
+service "vote" deleted
 ```
