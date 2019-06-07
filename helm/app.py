@@ -3,33 +3,40 @@ import os
 import socket
 import random
 import json
+import collections
 
-option_a = os.getenv('OPTION_A', 'Cats')
-option_b = os.getenv('OPTION_B', 'Dogs')
 hostname = socket.gethostname()
-namespace = os.getenv('CND_KUBERNETES_NAMESPACE', 'localhost')
-votes = {option_a: 0, option_b: 0}
+votes = collections.defaultdict(int)
 
 app = Flask(__name__)
+
+def getOptions():
+    option_a = 'Cats'
+    option_b = 'Dogs'
+    return option_a, option_b
 
 @app.route("/", methods=['POST','GET'])
 def hello():
     vote = None
+    option_a, option_b = getOptions()
     if request.method == 'POST':
         vote = request.form['vote']
         vote = option_a if vote == "a" else option_b
         votes[vote] = votes[vote] + 1
+    with open('/var/run/secrets/kubernetes.io/serviceaccount/namespace', 'r') as fp:
+        namespace = fp.read()
+
     resp = make_response(render_template(
         'index.html',
         option_a=option_a,
         option_b=option_b,
         hostname=hostname,
+        namespace=namespace,
         votes_a=votes[option_a],
         votes_b=votes[option_b],
-        namespace=namespace
     ))
     return resp
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)

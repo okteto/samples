@@ -1,8 +1,8 @@
 # Java Sample App
 
-This example shows how to leverage [Okteto](https://okteto.com) to develop a Java Sample App directly in the cloud. The Python Sample App is deployed using raw Kubernetes manifests. It's based on [Spring's gs-rest-service example](https://github.com/spring-guides/gs-rest-service).
+This example shows how to leverage [Okteto](https://okteto.com) to develop a Java Sample App directly in the cloud. The Java Sample App is deployed using raw Kubernetes manifests. It's based on [Spring's gs-rest-service example](https://github.com/spring-guides/gs-rest-service).
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. You can also deploy it in the [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. You can also deploy it in our [Free Trial Okteto Kubernetes Cluster](https://cloud.okteto.com).
 
 
 ## Step 1: Install the Okteto CLI
@@ -10,7 +10,7 @@ Okteto works in any Kubernetes cluster by reading your local Kubernetes credenti
 Install the Okteto CLI by following our [installation guides](https://github.com/okteto/okteto/blob/master/docs/installation.md).
 
 
-## Deploy the payroll service
+## Step 2: Deploy the Java Sample App
 
 Clone the repository and go to the java-kubectl folder.
 
@@ -19,22 +19,34 @@ git clone https://github.com/okteto/samples
 cd samples/java
 ```
 
-Deploy the Payroll application by using the following command:
+Deploy the Java Sample App by using the following command:
 ```console
 kubectl apply -f manifests
+deployment.apps "payroll" created
+service "payroll" created
 ```
 
-## Cloud native development
+## Step 3: Create your Okteto Environment
 
 In order to activate your Cloud Native Development, execute:
 
 ```console
 okteto up
+ ✓  Okteto Environment activated
+ ✓  Files synchronized
+ ✓  Your Okteto Environment is ready
+    Namespace: cindy
+    Name:      payroll
+    Forward:   8080 -> 8080
+
+
+Welcome to Gradle 5.1.1!
+...
 ```
 
 The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers (eliminating the **docker build/push/pull/redeploy** cycle). 
 
-This development environment includes java dev tools (e.g. gradle) and it's configured to  automatically start the application by running `gradle bootRun`, configured to reload the process after a successful compilation.  It will also start forwarding port 8080 to your local machine.
+This development environment includes java dev tools (e.g. gradle) and it's configured to automatically start the application by running `gradle bootRun`, configured to reload the process after a successful compilation.  It will also start forwarding port 8080 to your local machine.
 
 Verify that everything is up and running by calling the `/employees` endpoint from your local machine:
 ```console
@@ -59,6 +71,8 @@ curl http://localhost:8080/employees/4
     "name":"Cindy Lopez"
 }
 ```
+
+## Step 4: Develop directly in the cloud
 
  Time to write some code. Let's say that the company just hired employee #5, and you're tasked with adding her to the employee list. First, we'll check and see if someone else already took care of the work by calling the API:
 
@@ -104,10 +118,12 @@ Your changes were automatically applied, no docker, kubectl or even a local jvm 
 
 *review [okteto's usage](https://okteto.com/docs/reference/cli) guide to see other commands available to help you speed you up your development.*
 
-## Cleanup
+## Step 5: Cleanup
 
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following command to remove the resources created by this guide: 
 
 ```console
 kubectl delete -f manifests
+deployment.apps "payroll" deleted
+service "payroll" deleted
 ```

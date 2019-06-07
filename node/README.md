@@ -6,7 +6,7 @@ This example shows how to leverage [Okteto](https://okteto.com) to develop a Nod
 - A very simple Node.js API using [Express](https://expressjs.com).
 - A [MongoDB](https://www.mongodb.com) database.
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/node/) to deploy the Node + React Sample App in our [Free Trial Okteto Enterprise](https://cloud.okteto.com) offering.
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/node/) to deploy the Node + React Sample App in our [Free Trial Okteto Kubernetes Cluster](https://cloud.okteto.com).
 
 
 ## Step 1: Install the Okteto CLI
@@ -31,6 +31,12 @@ Run the Movies app by executing:
 
 ```console
 $ kubectl apply -f manifests
+deployment.apps "movies-api" created
+service "movies-api" created
+deployment.apps "movies-frontend" created
+service "movies-frontend" created
+service "mongo" created
+statefulset.apps "mongo" created
 ```
 
 ### Step 3: Create your Okteto Environment for the frontend
@@ -45,17 +51,17 @@ From the frontend's root directory, launch the following command:
 
 ```console
 $ okteto up
-```
-
-The `okteto up` command will automatically start an Okteto Environment. It will also start a *file synchronization service* to keep your changes up to date between your local filesystem and your Okteto Environment, without rebuilding containers (eliminating the docker build/push/pull/redeploy cycle).
-
-```console
-$ okteto up
  ✓  Okteto Environment activated
  ✓  Files synchronized
  ✓  Your Okteto Environment is ready
-    Name:     movies-frontend
+    Namespace: cindy
+    Name:      movies-frontend
+    Forward:   8080 -> 8080
+
+root@movies-frontend-8c8997bd6-h5rq5:/src#
 ```
+
+The `okteto up` command will automatically start an Okteto Environment. It will also start a *file synchronization service* to keep your changes up to date between your local filesystem and your Okteto Environment, without rebuilding containers (eliminating the docker build/push/pull/redeploy cycle).
 
 Once the Okteto Environment is ready, the Okteto Terminal will automatically open. Use it to run your frontend with the same flow you would have locally:
 
@@ -64,8 +70,6 @@ okteto> yarn start
 ```
 
 This will compile and run webpack-dev-server listening on port 8080.
-
-> Note that Okteto creates a public HTTPS endpoint forwarding to the port 8080 of your application.
 
 The frontend of your application is now ready and in development mode. You can access it at http://localhost:8080.
 
@@ -85,4 +89,10 @@ Cancel the `okteto up` command by pressing `ctrl + c` + `exit` and run the follo
 
 ```console
 kubectl delete -f ../manifests
+deployment.apps "movies-api" deleted
+service "movies-api" deleted
+deployment.apps "movies-frontend" deleted
+service "movies-frontend" deleted
+service "mongo" deleted
+statefulset.apps "mongo" deleted
 ```
