@@ -2,7 +2,7 @@
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a Ruby on Rails Sample App directly in the cloud. The Ruby on Rails Sample App is deployed using raw Kubernetes manifests.
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. You can also deploy it in our [Free Trial Okteto Kubernetes Cluster](https://cloud.okteto.com).
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/ruby/) to deploy the Ruby on Rails Sample App in our [Free Trial Okteto Kubernetes Cluster](https://cloud.okteto.com).
 
 ## Step 1: Install the Okteto CLI
 
