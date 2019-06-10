@@ -18,10 +18,12 @@ $ cd samples/ruby
 ```
 
 Deploy the blog application by using the following command:
+
 ```console
 $ kubectl apply -f manifests
 deployment.apps "blog" created
-service "blog" created```
+service "blog" created
+```
 
 ## Step 3: Cloud Native Development
 
