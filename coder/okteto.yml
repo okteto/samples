@@ -1,0 +1,7 @@
+name: vote
+image: okteto/coder-python:latest
+workdir: /home/coder/project
+command: ["dumb-init", "code-server", "--no-auth", "--allow-http"]
+forward:
+  - 8443:8443
+  - 8080:8080  
