@@ -6,61 +6,64 @@ const app = express();
 const url = 'mongodb://mongo:27017';
 const dbName = 'movies';
 
-mongo.connect(url, { 
-  useNewUrlParser: true,
-  reconnectTries: 30,
-  reconnectInterval: 1000
-}, (err, client) => {
-  if (err) {
-    console.error('Error connecting to mongodb', err);
-    process.exit(1);
-  }
+function startWithRetry() {
+  mongo.connect(url, { 
+    useNewUrlParser: true,
+    reconnectTries: 30,
+    reconnectInterval: 1000
+  }, (err, client) => {
+    if (err) {
+      console.error('Error connecting to mongodb, retrying in 1 sec');
+      setTimeout(start, 1000);
+      return;
+    }
 
-  console.log(`Connected to ${url}`);
+    console.log(`Connected to ${url}`);
 
-  const db = client.db('movies');
-  
-  preloadData(db);
+    const db = client.db('movies');
+    
+    preloadData(db);
 
-  app.listen(8080, () => {
-    app.get("/api/movies", (req, res, next) => {
-      db.collection('movies').find().toArray( (err, results) =>{
-        if (err){
-          console.log(`failed to query movies: ${err}`)
-          res.json([]);
-          return;
-        }
-         res.json(results);
+    app.listen(8080, () => {
+      app.get("/api/movies", (req, res, next) => {
+        db.collection('movies').find().toArray( (err, results) =>{
+          if (err){
+            console.log(`failed to query movies: ${err}`)
+            res.json([]);
+            return;
+          }
+          res.json(results);
+        });
       });
-    });
 
-    app.get("/api/mylist", (req, res, next) => {
-      db.collection('mylist').find().toArray( (err, results) =>{
-        if (err){
-          console.log(`failed to query movies: ${err}`)
-          res.json([]);
-          return;
-        }
+      app.get("/api/mylist", (req, res, next) => {
+        db.collection('mylist').find().toArray( (err, results) =>{
+          if (err){
+            console.log(`failed to query movies: ${err}`)
+            res.json([]);
+            return;
+          }
 
-        res.json(results);
+          res.json(results);
+        });
       });
-    });
 
-    app.get("/api/watching", (req, res, next) => {
-      db.collection('watching').find().toArray( (err, results) =>{
-        if (err){
-          console.log(`failed to query movies: ${err}`)
-          res.json([]);
-          return;
-        }
+      app.get("/api/watching", (req, res, next) => {
+        db.collection('watching').find().toArray( (err, results) =>{
+          if (err){
+            console.log(`failed to query movies: ${err}`)
+            res.json([]);
+            return;
+          }
 
-        res.json(results);
+          res.json(results);
+        });
       });
-    });
 
-    console.log("Server running on port 8080.");
+      console.log("Server running on port 8080.");
+    });
   });
-});
+};
 
 var preloadData = function(db) {
   console.log("preloading data");
@@ -95,3 +98,5 @@ var createNewEntries = function(collection, entries) {
     });
   });
 };
+
+startWithRetry();
