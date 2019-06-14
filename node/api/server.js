@@ -14,7 +14,7 @@ function startWithRetry() {
   }, (err, client) => {
     if (err) {
       console.error('Error connecting to mongodb, retrying in 1 sec');
-      setTimeout(start, 1000);
+      setTimeout(startWithRetry, 1000);
       return;
     }
 
