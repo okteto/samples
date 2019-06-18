@@ -1,7 +1,7 @@
 name: vote
 image: okteto/vote:ssh
 workdir: /src
-command: [ "sh", "-c", "cp /etc/ssh-key/* /root/.ssh && /usr/sbin/sshd -D" ]
+command: [ "sh", "-c", "env > /root/.ssh/environment && cp /etc/ssh-key/* /root/.ssh && /usr/sbin/sshd -D" ]
 forward:
   - 8080:8080
   - 22000:22
