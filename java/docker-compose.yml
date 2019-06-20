@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   dev:
-    image: okteto/payroll:latest
+    image: okteto/payroll:dev
     build: 
       context: .
       target: builder

@@ -1,5 +1,5 @@
 name: payroll
-image: okteto/payroll:0.1-dev
+image: okteto/payroll:dev
 command:
 - gradle
 - bootRun
