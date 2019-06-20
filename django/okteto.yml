@@ -1,0 +1,8 @@
+name: shell
+image: okteto/django:latest
+command: ["bash"]
+services:
+  - name: web
+    mountpath: /app
+  - name: worker
+    mountpath: /app

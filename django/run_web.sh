@@ -1,7 +1,11 @@
 #!/bin/sh
 
 # wait for PSQL server to start
-sleep 10
+while ! curl http://db:5432/ 2>&1 | grep '52'
+do
+    echo "Waiting for database..."
+    sleep 1
+done
 
 cd myproject
 

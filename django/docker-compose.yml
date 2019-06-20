@@ -26,13 +26,13 @@ services:
     ports:
       - "5432:5432"
 
-  redis:
+  cache:
     image: redis:2.8.19
-    hostname: redis
+    hostname: cache
 
-  rabbit:
-    hostname: rabbit
+  queue:
     image: rabbitmq:3.6.0
+    hostname: queue
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=mypass

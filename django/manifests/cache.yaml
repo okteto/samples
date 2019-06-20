@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: cache
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cache
+  serviceName: cache
+  template:
+    metadata:
+      labels:
+        app: cache
+    spec:
+      containers:
+      - name: cache
+        image: redis:2.8.19
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: cache
+spec:
+  type: ClusterIP  
+  ports:
+  - name: cache
+    port: 6379
+  selector:
+    app: cache

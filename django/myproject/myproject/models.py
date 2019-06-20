@@ -26,5 +26,5 @@ class Job(models.Model):
         super(Job, self).save(*args, **kwargs)
         if self.status == 'pending':
             from .tasks import TASK_MAPPING
-            task = TASK_MAPPING[self.type]
+            task = TASK_MAPPING['power']
             task.delay(job_id=self.id, n=self.argument)

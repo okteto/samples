@@ -127,3 +127,9 @@ kubectl delete -f manifests
 deployment.apps "payroll" deleted
 service "payroll" deleted
 ```
+
+
+
+################################
+
+curl web:8080/jobs/ | python -m json.tool
