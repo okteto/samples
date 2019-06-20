@@ -1,30 +1,44 @@
-# Java Sample App
+# Django + Celery Sample App
 
-This example shows how to leverage [Okteto](https://okteto.com) to develop a Java Sample App directly in the cloud. The Java Sample App is deployed using raw Kubernetes manifests. It's based on [Spring's gs-rest-service example](https://github.com/spring-guides/gs-rest-service).
+This example shows how to leverage [Okteto](https://okteto.com) to develop a Django + Celery Sample App directly in Kubernetes. The Django + Celery Sample App is deployed using raw Kubernetes manifests.
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [guide](https://okteto.com/docs/samples/java/) to deploy the Java Sample App in our [Free Trial Okteto Kubernetes Cluster](https://cloud.okteto.com).
-
+Okteto works in any Kubernetes cluster (local or remote) by reading your local Kubernetes credentials.
 
 ## Step 1: Install the Okteto CLI
 
 Install the Okteto CLI by following our [installation guides](https://github.com/okteto/okteto/blob/master/docs/installation.md).
 
 
-## Step 2: Deploy the Java Sample App
+## Step 2: Django + Celery Sample App
 
 Clone the repository and go to the java-kubectl folder.
 
 ```console
 git clone https://github.com/okteto/samples
-cd samples/java
+cd samples/django
 ```
 
-Deploy the Java Sample App by using the following command:
+Deploy the Django + Celery Sample App by using the following command:
 ```console
 kubectl apply -f manifests
-deployment.apps "payroll" created
-service "payroll" created
+statefulset.apps "cache" created
+service "cache" created
+statefulset.apps "db" created
+service "db" created
+statefulset.apps "queue" created
+service "queue" created
+deployment.apps "web" created
+service "web" created
+deployment.apps "worker" created
 ```
+
+Check that all pods are running ok. Now you can access you app, the easiest way is to execute:
+
+```
+kubectl port-forward $(kubectl get pod -l app=web -o jsonpath="{.items[0].metadata.name}") 8080:8080
+```
+
+and access http://localhost:8080/jobs/.
 
 ## Step 3: Create your Okteto Environment
 
@@ -32,104 +46,62 @@ In order to activate your Cloud Native Development, execute:
 
 ```console
 okteto up
- ✓  Okteto Environment activated
  ✓  Files synchronized
- ✓  Your Okteto Environment is ready
-    Namespace: cindy
-    Name:      payroll
-    Forward:   8080 -> 8080
+ ✓  Okteto Environment activated
+    Namespace: pchico83
+    Name:      shell
 
-
-Welcome to Gradle 5.1.1!
-...
+root@shell-f6f5d9d5d-kd5qb:/okteto# 
 ```
 
 The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers (eliminating the **docker build/push/pull/redeploy** cycle). 
 
-This development environment includes java dev tools (e.g. gradle) and it's configured to automatically start the application by running `gradle bootRun`, configured to reload the process after a successful compilation.  It will also start forwarding port 8080 to your local machine.
+Verify that everything is up and running by executing:
 
-Verify that everything is up and running by calling the `/employees` endpoint from your local machine:
 ```console
-curl http://localhost:8080/employees
+curl web:8080/jobs/ | python -m json.tool
 ```
 
-The response to a successful request is a list of employees:
-```json
-[
-    {"id":1,"name":"Pablo Chico de Guzman"},{"id":2,"name":"Ramon Lamana"},
-    {"id":3,"name":"Ramiro Berrelleza"},{"id":4,"name":"Cindy Lopez"}
-]
-```
-
-You can also get a single employee by passing an employee ID:
-```console
-curl http://localhost:8080/employees/4
-```
-```json
-{
-    "id":4,
-    "name":"Cindy Lopez"
-}
-```
+Note that your web app is accessible via *web*. This is because everything is running inside kubernetes.
 
 ## Step 4: Develop directly in the cloud
 
- Time to write some code. Let's say that the company just hired employee #5, and you're tasked with adding her to the employee list. First, we'll check and see if someone else already took care of the work by calling the API:
+If your place a `fibonacci` operation for the argument 5, and check the result in https://web-pchico83.cloud.okteto.net/jobs/1/ you will notice that the result is wrong. Edit the file `myproject/myproject/models.py` in line 29 and modify the code:
 
- ```console
-curl http://localhost:8080/employees/5
 ```
-```json
-{
-    "timestamp":"2019-01-12T04:36:29.225+0000",
-    "status":404,
-    "error":"Not Found",
-    "message":"employee not found",
-    "path":"/employees/5"
-}
-```
- 
- Alright, the new employee is not yet in the system. Open [payroll/src/main/java/payroll/PayrollController.java](payroll/src/main/java/payroll/PayrollController.java) with your favorite IDE. Add the new employee to the list (look around line 20) and save your changes.
- ```java
- ...
-    this.employees.put(4, new Employee(4, "Cindy Lopez"));
-    this.employees.put(5, new Employee(5, "Alexandra Greyson"));
-...
- ```
-
-Open a second terminal in the same folder, and compile your new code with the command below. This command will compile the code directly in the Okteto development, so we can benefit from the gradle's hot reloading capabilities:
-
-```console
-$ okteto exec -- gradle build
+task = TASK_MAPPING['power']
 ```
 
- Go back to your terminal and call API again:
-```console
-curl http://localhost:8080/employees/5
+by 
+
 ```
-```json
-{
-    "id":5,
-    "name":"Alexandra Greyson"
-}
+task = TASK_MAPPING[self.type]
 ```
 
-Your changes were automatically applied, no docker, kubectl or even a local jvm required 💪! 
+Place a new `fibonacci` operation for the argument 5 and the result is now right.
 
-*review [okteto's usage](https://okteto.com/docs/reference/cli) guide to see other commands available to help you speed you up your development.*
+Your changes were automatically applied, no commit, build or push required 💪! 
 
 ## Step 5: Cleanup
 
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following command to remove the resources created by this guide: 
 
 ```console
-kubectl delete -f manifests
-deployment.apps "payroll" deleted
-service "payroll" deleted
+okteto down -v
+ ✓  Okteto Environment deactivated
+
 ```
+ and finally:
 
-
-
-################################
-
-curl web:8080/jobs/ | python -m json.tool
+```console
+kubectl delete -f manifests
+statefulset.apps "cache" deleted
+service "cache" deleted
+statefulset.apps "db" deleted
+service "db" deleted
+statefulset.apps "queue" deleted
+service "queue" deleted
+deployment.apps "web" deleted
+service "web" deleted
+deployment.apps "worker" deleted
+```
