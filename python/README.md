@@ -87,6 +87,12 @@ Go back to the browser, and reload the page. Notice how your changes are instant
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
 
 ```console
+okteto down -v
+ ✓  Okteto Environment deactivated
+ 
+```
+
+```console
 kubectl delete -f manifests
 deployment.apps "vote" deleted
 service "vote" deleted

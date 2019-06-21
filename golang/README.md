@@ -79,6 +79,12 @@ Go back to the browser, and go to the new endpoint http://localhost:8080/times/3
 Cancel the `okteto up` command by pressing `ctrl + c` + `exit` and run the following commands to remove the resources created by this guide: 
 
 ```console
+okteto down -v
+ ✓  Okteto Environment deactivated
+ 
+```
+
+```console
 kubectl delete -f manifests
 deployment.apps "math" deleted
 service "math" deleted

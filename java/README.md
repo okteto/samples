@@ -123,6 +123,12 @@ Your changes were automatically applied, no docker, kubectl or even a local jvm 
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following command to remove the resources created by this guide: 
 
 ```console
+okteto down -v
+ ✓  Okteto Environment deactivated
+ 
+```
+
+```console
 kubectl delete -f manifests
 deployment.apps "payroll" deleted
 service "payroll" deleted
