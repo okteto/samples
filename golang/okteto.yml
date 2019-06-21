@@ -2,5 +2,8 @@ name: math
 image: okteto/math:latest
 command: ["bash"]
 workdir: /go/src/app
+volumes:
+  - /go/pkg/
+  - /root/.cache/go-build/
 forward:
   - 8080:8080
