@@ -88,6 +88,13 @@ Go back to the browser, and cool! Your changes are automatically live with no ne
 Cancel the `okteto up` command by pressing `ctrl + c` + `exit` and run the following commands to remove the resources created by this guide: 
 
 ```console
+okteto down -v
+ ✓  Okteto Environment deactivated
+ 
+```
+
+
+```console
 kubectl delete -f ../manifests
 deployment.apps "movies-api" deleted
 service "movies-api" deleted

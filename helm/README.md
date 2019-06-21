@@ -83,6 +83,13 @@ Go back to the browser, and reload the page. Notice how your changes are instant
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following command to  remove the resources created by this guide: 
 
 ```console
+okteto down -v
+ ✓  Okteto Environment deactivated
+ 
+```
+
+
+```console
 helm delete --purge vote
 ```
 

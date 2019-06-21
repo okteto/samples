@@ -69,6 +69,12 @@ Go back to the application endpoint and yes, your changes are instantly applied!
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
 
 ```console
+okteto down -v
+ ✓  Okteto Environment deactivated
+ 
+```
+
+```console
 kubectl delete -f manifests
 service "redis" deleted
 statefulset.apps "redis" deleted
