@@ -73,9 +73,9 @@ Type: fibonacci
 Argument: 5
 ```
 
-Press the `POST` button to submit the operation. The response payload will include the `url` of the job. Go to `http://localhost:8080/jobs/1/` and you will notice that the result is wrong (hint: the fibonacci number of 5 is not 32). This is because our worker has a bug 🙀!
+Press the `POST` button to submit the operation. The response payload will include the `url` of the job. Go to `http://localhost:8080/jobs/1/` and you will notice that the result is wrong (_hint: the fibonacci number of 5 is not 32_). This is because our worker has a bug 🙀!
 
-Typically, fixing this would involve you running the app locally, fixing the bug, building a new container, pushing it and redeploying your app. Instead, we're going to do it the Cloud Native way:
+Typically, fixing this would involve you running the app locally, fixing the bug, building a new container, pushing it and redeploying your app. Instead, we're going to do it the *Cloud Native way*:
 
 Open `myproject/myproject/models.py` in your favorite IDE, and modify the value of the `task` variable in line 29 to apply the correct operation as shown below, and save your file.
 
@@ -89,10 +89,10 @@ to
 task = TASK_MAPPING[self.type]
 ```
 
-Go back to http://localhost:8080/jobs/, reload the page, and submit a new `fibonacci` calculation, using the same values as before. Go to `http://localhost:8080/jobs/2/`, and see if the result is correct this time (hint: the fibonacci number of 5 is 5).
+Go back to http://localhost:8080/jobs/, reload the page, and submit a new `fibonacci` calculation, using the same values as before. Go to `http://localhost:8080/jobs/2/`, and see if the result is correct this time (_hint: the fibonacci number of 5 is 5_).
 
 
-How did this happen? Well, with Okteto, your changes were automatically applied as soon as you saved them, no commit, build or push required 💪! 
+How did this happen? Well, with Okteto, your changes were automatically applied as soon as you saved them, no commit, build, push or redeploy required 💪! 
 
 ## Step 5: Cleanup
 
