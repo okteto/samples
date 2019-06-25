@@ -1,8 +1,8 @@
-name: shell
+name: web
 image: okteto/django:latest
-command: ["bash"]
+command: ["./run_web.sh"]
+forward:
+  - 8080:8080
 services:
-  - name: web
-    mountpath: /app
   - name: worker
     mountpath: /app
