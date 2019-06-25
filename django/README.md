@@ -60,7 +60,25 @@ okteto up
 root@shell-f6f5d9d5d-kd5qb:/okteto# 
 ```
 
-The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes to the web and worker deployments without having to rebuild or redeploy (eliminating the **docker build/push/pull/redeploy** cycle).
+The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes to the web and worker deployments without having to rebuild or redeploy (eliminating the **docker build/push/pull/redeploy** cycle). You can control how your development environment is created by modifying `okteto.yml`.
+
+Since our application is formed of multiple services, we decided to configure `okteto.yml` to create a multi-service remote development environment:
+
+```yaml
+name: web
+image: okteto/django:latest
+command: ["./run_web.sh"]
+mountpath: /app
+forward:
+  - 8080:8080
+services:
+  - name: worker
+    mountpath: /app
+```
+
+The `name`,`image`, `command`, `mountpath` and `forward` keys will give Okteto information about your primary service, while the `services` list tells Okteto which other services you want to have as part of your development environment. 
+
+The `mountpath` key tells Okteto [where to mount your local folder](https://okteto.com/docs/reference/manifest/index.html#mountpath-string-optional) in your development environment.  [This page](https://okteto.com/docs/reference/manifest/index.html#services-object-optional) has more information about services, and all the values you can configure.
 
 Once your environment is active, verify that the application is up and running by opening your browser and navigating to http://localhost:8080/jobs/ (Okteto is automatically forwarding port 8080 between your pod and your computer). 
 

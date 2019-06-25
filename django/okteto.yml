@@ -1,6 +1,7 @@
 name: web
 image: okteto/django:latest
 command: ["./run_web.sh"]
+mountpath: /app
 forward:
   - 8080:8080
 services:
