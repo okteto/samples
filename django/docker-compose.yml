@@ -1,0 +1,41 @@
+version: '3.4'
+services:
+  web:
+    image: okteto/django:latest
+    build: .
+    command: ./run_web.sh
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+
+  worker:
+    image: okteto/django:latest
+    build: .
+    command: ./run_celery.sh
+    volumes:
+      - .:/app
+
+  db:
+    image: postgres:9.4
+    hostname: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    ports:
+      - "5432:5432"
+
+  cache:
+    image: redis:2.8.19
+    hostname: cache
+
+  queue:
+    image: rabbitmq:3.6.0
+    hostname: queue
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=mypass
+    ports:
+      - "5672:5672"
+      - "15672:15672"

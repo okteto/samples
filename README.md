@@ -7,6 +7,7 @@ This repository contains examples of how to develop applications directly in you
 ## Examples
 
 1. [Python](python/README.md)
+1. [DJango](django/README.md)
 1. [Golang](golang/README.md)
 1. [Node+React](node/README.md)
 1. [Ruby](ruby/README.md)
