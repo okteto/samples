@@ -18,7 +18,9 @@ git clone https://github.com/okteto/samples
 cd samples/django
 ```
 
-Deploy the Django + Celery Sample App by using the following command:
+The Django + Celery Sample App is a multi-service application. It consists of a web view, a worker, a queue, a cache and a DB. 
+Deploy the entire application by using the following command:
+
 ```console
 kubectl apply -f manifests
 statefulset.apps "cache" created
@@ -58,36 +60,36 @@ okteto up
 root@shell-f6f5d9d5d-kd5qb:/okteto# 
 ```
 
-The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers (eliminating the **docker build/push/pull/redeploy** cycle). 
+The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes to the web and worker deployments without having to rebuild or redeploy (eliminating the **docker build/push/pull/redeploy** cycle).
 
 Once your environment is active, verify that the application is up and running by opening your browser and navigating to http://localhost:8080/jobs/ (Okteto is automatically forwarding port 8080 between your pod and your computer). 
 
 ## Step 4: Develop directly in the cloud
 
-Now things get more exciting. Go to your browser, and try to calculate the `fibonnacci` number for the number `5`. To do it, put the values shown below in the web UI, leaving everything else as is.
+Now things get more exciting. Go to your browser, and try to calculate the `fibonacci` number for the number `5`. To do it, put the values shown below in the web UI, leaving everything else as is.
 
-```
+```console
 Type: fibonacci
 Argument: 5
 ```
 
-Press the `POST` button to submit the operation. The response payload will include the `url` of the job. Go to `http://localhost:8080/jobs/1/` and you will notice that the result is wrong. This is because our code has a bug 🙀!
+Press the `POST` button to submit the operation. The response payload will include the `url` of the job. Go to `http://localhost:8080/jobs/1/` and you will notice that the result is wrong (hint: the fibonacci number of 5 is not 32). This is because our worker has a bug 🙀!
 
 Typically, fixing this would involve you running the app locally, fixing the bug, building a new container, pushing it and redeploying your app. Instead, we're going to do it the Cloud Native way:
 
 Open `myproject/myproject/models.py` in your favorite IDE, and modify the value of the `task` variable in line 29 to apply the correct operation as shown below, and save your file.
 
-```
+```python
 task = TASK_MAPPING['power']
 ```
 
 to
 
-```
+```python
 task = TASK_MAPPING[self.type]
 ```
 
-Go back to http://localhost:8080/jobs/, reload the page, and submit a new `fibonnaci` calculation, using the same values as before. Go to `http://localhost:8080/jobs/2/`, and see if the result is correct this time (hint: the fibonnaci number of 5 is 5).
+Go back to http://localhost:8080/jobs/, reload the page, and submit a new `fibonacci` calculation, using the same values as before. Go to `http://localhost:8080/jobs/2/`, and see if the result is correct this time (hint: the fibonacci number of 5 is 5).
 
 
 How did this happen? Well, with Okteto, your changes were automatically applied as soon as you saved them, no commit, build or push required 💪! 
