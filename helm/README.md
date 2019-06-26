@@ -14,13 +14,13 @@ Install the Okteto CLI by following our [installation guides](https://github.com
 Clone the repository and go to the `helm` folder:
 
 ```console
-git clone https://github.com/okteto/samples
-cd samples/helm
+$ git clone https://github.com/okteto/samples
+$ cd samples/helm
 ```
 
 Deploy the Voting chart using the following command:
 ```console
-helm install --name vote ./chart/vote
+$ helm install --name vote ./chart/vote
 ```
 
 Wait for one or two minutes until the application is running. 
@@ -83,14 +83,14 @@ Go back to the browser, and reload the page. Notice how your changes are instant
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following command to  remove the resources created by this guide: 
 
 ```console
-okteto down -v
+$ okteto down -v
  ✓  Okteto Environment deactivated
  
 ```
 
 
 ```console
-helm delete --purge vote
+$ helm delete --purge vote
 ```
 
 
