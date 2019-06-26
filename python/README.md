@@ -14,8 +14,8 @@ Install the Okteto CLI by following our [installation guides](https://github.com
 Get a local version of the sample application by executing the following commands in your local terminal:
 
 ```console
-git clone https://github.com/okteto/samples
-cd samples/python
+$ git clone https://github.com/okteto/samples
+$ cd samples/python
 ```
 
 You now have a functioning git repository that contains a simple python application and a `requirements.txt`, which is used by Python’s dependency manager, `pip`.
@@ -27,7 +27,7 @@ In the `manifest/` directory you also have raw Kubernetes manifests that we will
 Run the Voting app by executing:
 
 ```console
-kubectl apply -f manifests
+$ kubectl apply -f manifests
 ```
 
 ## Step 3: Create your Okteto Environment
@@ -87,13 +87,13 @@ Go back to the browser, and reload the page. Notice how your changes are instant
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
 
 ```console
-okteto down -v
+$ okteto down -v
  ✓  Okteto Environment deactivated
  
 ```
 
 ```console
-kubectl delete -f manifests
+$ kubectl delete -f manifests
 deployment.apps "vote" deleted
 service "vote" deleted
 ```

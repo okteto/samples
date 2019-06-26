@@ -72,13 +72,13 @@ To keep testing the power of cloud native development, continue with the rest of
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
 
 ```console
-okteto down -v
+$ okteto down -v
  ✓  Okteto Environment deactivated
  
 ```
 
 ```console
-kubectl delete -f manifests
+$ kubectl delete -f manifests
 deployment.apps "blog" deleted
 service "blog" deleted
 ```

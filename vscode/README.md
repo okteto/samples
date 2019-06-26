@@ -13,14 +13,14 @@ Install the Okteto CLI by following our [installation guides](https://github.com
 Clone this repository and move to this example folder.
 
 ```console
-git clone https://github.com/okteto/samples
-cd samples/vscode
+$ git clone https://github.com/okteto/samples
+$ cd samples/vscode
 ```
 
 Run the Voting App by executing:
 
 ```console
-kubectl apply -f manifests
+$ kubectl apply -f manifests
 deployment.apps "vote" created
 service "vote" created
 ```
@@ -32,7 +32,7 @@ Wait for one or two minutes until the application is running. You can access it 
 Now start your Okteto Environment by running the following command:
 
 ```console
-okteto up
+$ okteto up
  ✓  Okteto Environment activated
  ✓  Files synchronized
  ✓  Your Okteto Environment is ready
@@ -79,13 +79,13 @@ Go to the browser again and reload the page. Your changes were applied instantly
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
 
 ```console
-okteto down -v
+$ okteto down -v
  ✓  Okteto Environment deactivated
  
 ```
 
 ```console
-kubectl delete -f manifests
+$ kubectl delete -f manifests
 deployment.apps "vote" deleted
 service "vote" deleted
 ```

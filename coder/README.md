@@ -13,8 +13,8 @@ Install the Okteto CLI by following our [installation guides](https://github.com
 Get a local version of the sample application by executing the following commands in your local terminal:
 
 ```console
-git clone https://github.com/okteto/samples
-cd samples/coder
+$ git clone https://github.com/okteto/samples
+$ cd samples/coder
 ```
 
 You now have a functioning git repository that contains a simple python application and a `requirements.txt`, which is used by Python’s dependency manager, `pip`.
@@ -26,7 +26,7 @@ In the `manifest/` directory you also have raw Kubernetes manifests that we will
 Run the Python Sample App by executing:
 
 ```console
-kubectl apply -f manifests
+$ kubectl apply -f manifests
 service "redis" created
 statefulset.apps "redis" created
 deployment.apps "vote" created
@@ -69,13 +69,13 @@ Go back to the application endpoint and yes, your changes are instantly applied!
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
 
 ```console
-okteto down -v
+$ okteto down -v
  ✓  Okteto Environment deactivated
  
 ```
 
 ```console
-kubectl delete -f manifests
+$ kubectl delete -f manifests
 service "redis" deleted
 statefulset.apps "redis" deleted
 deployment.apps "vote" deleted

@@ -15,13 +15,13 @@ Install the Okteto CLI by following our [installation guides](https://github.com
 Clone the repository and go to the java-kubectl folder.
 
 ```console
-git clone https://github.com/okteto/samples
-cd samples/java
+$ git clone https://github.com/okteto/samples
+$ cd samples/java
 ```
 
 Deploy the Java Sample App by using the following command:
 ```console
-kubectl apply -f manifests
+$ kubectl apply -f manifests
 deployment.apps "payroll" created
 service "payroll" created
 ```
@@ -31,7 +31,7 @@ service "payroll" created
 In order to activate your Cloud Native Development, execute:
 
 ```console
-okteto up
+$ okteto up
  ✓  Okteto Environment activated
  ✓  Files synchronized
  ✓  Your Okteto Environment is ready
@@ -50,7 +50,7 @@ This development environment includes java dev tools (e.g. gradle) and it's conf
 
 Verify that everything is up and running by calling the `/employees` endpoint from your local machine:
 ```console
-curl http://localhost:8080/employees
+$ curl http://localhost:8080/employees
 ```
 
 The response to a successful request is a list of employees:
@@ -63,7 +63,7 @@ The response to a successful request is a list of employees:
 
 You can also get a single employee by passing an employee ID:
 ```console
-curl http://localhost:8080/employees/4
+$ curl http://localhost:8080/employees/4
 ```
 ```json
 {
@@ -123,13 +123,13 @@ Your changes were automatically applied, no docker, kubectl or even a local jvm 
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following command to remove the resources created by this guide: 
 
 ```console
-okteto down -v
+$ okteto down -v
  ✓  Okteto Environment deactivated
  
 ```
 
 ```console
-kubectl delete -f manifests
+$ kubectl delete -f manifests
 deployment.apps "payroll" deleted
 service "payroll" deleted
 ```
