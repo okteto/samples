@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # wait for PSQL server to start
-while ! curl http://db:5432/ 2>&1 | grep '52'
+while ! curl --max-time 30 http://db:5432/ 2>&1 | grep '52'
 do
     echo "Waiting for database..."
     sleep 1

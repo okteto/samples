@@ -10,8 +10,8 @@ SECRET_KEY = 'megg_yej86ln@xao^+)it4e&amp;ueu#!4tl9p1h%2sjr7ey0)m25f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-TEMPLATE_DEBUG = True
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+APPEND_SLASH = True
 
 # Application definition
 
@@ -27,8 +27,10 @@ INSTALLED_APPS = (
 
 )
 
-MIDDLEWARE_CLASSES = (
-)
+MIDDLEWARE_CLASSES = [
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),
@@ -127,3 +129,19 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERYD_HIJACK_ROOT_LOGGER = False
 CELERYD_PREFETCH_MULTIPLIER = 1
 CELERYD_MAX_TASKS_PER_CHILD = 1000
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
