@@ -15,3 +15,17 @@ spec:
       containers:
       - image: okteto/movies:api
         name: movies-api
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: movies-api
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "movies-api"
+    port: 8080
+  selector:
+    app: movies-api
