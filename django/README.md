@@ -14,15 +14,15 @@ Install the Okteto CLI by following our [installation guides](https://github.com
 Clone the repository and go to the django folder.
 
 ```console
-git clone https://github.com/okteto/samples
-cd samples/django
+$ git clone https://github.com/okteto/samples
+$ cd samples/django
 ```
 
 The Django + Celery Sample App is a multi-service application. It consists of a web view, a worker, a queue, a cache and a DB. 
 Deploy the entire application by using the following command:
 
 ```console
-kubectl apply -f manifests
+$ kubectl apply -f manifests
 statefulset.apps "cache" created
 service "cache" created
 statefulset.apps "db" created
@@ -38,12 +38,11 @@ Check that all pods are ready. You can do it by running the command below:
 ```
 $ kubectl get pod                                                                                      
 NAME                      READY   STATUS    RESTARTS   AGE
-cache-0                   1/1     Running   0          33m
-db-0                      1/1     Running   0          33m
-okteto-web-0              1/1     Running   0          10m
-queue-0                   1/1     Running   0          33m
-web-bfdcd7f69-cg8zl       1/1     Running   0          8m56s
-worker-6bdd6c848c-qs48m   1/1     Running   0          8m56s
+cache-0                   1/1       Running   0          2m
+db-0                      1/1       Running   0          2m
+queue-0                   1/1       Running   0          2m
+web-7bccc4bc99-2nwtc      1/1       Running   0          2m
+worker-654d7b8bd5-42rq2   1/1       Running   0          2m
 ```
 
 ## Step 3: Create your Okteto Environment
@@ -51,7 +50,7 @@ worker-6bdd6c848c-qs48m   1/1     Running   0          8m56s
 In order to activate your Cloud Native Development, execute:
 
 ```console
-okteto up
+$ okteto up
  ✓  Files synchronized
  ✓  Okteto Environment activated
     Namespace: pchico83
@@ -86,7 +85,7 @@ Once your environment is active, verify that the application is up and running b
 
 Now things get more exciting. Go to your browser, and try to calculate the `fibonacci` number for the number `5`. To do it, put the values shown below in the web UI, leaving everything else as is.
 
-```console
+```
 Type: fibonacci
 Argument: 5
 ```
@@ -117,14 +116,14 @@ How did this happen? Well, with Okteto, your changes were automatically applied 
 Cancel the `okteto up` command by pressing `ctrl + c` and run the following command to remove the resources created by this guide: 
 
 ```console
-okteto down -v
+$ okteto down -v
  ✓  Okteto Environment deactivated
 
 ```
  and finally delete the application by running:
 
 ```console
-kubectl delete -f manifests
+$ kubectl delete -f manifests
 statefulset.apps "cache" deleted
 service "cache" deleted
 statefulset.apps "db" deleted
