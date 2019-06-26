@@ -54,8 +54,9 @@ $ okteto up
  ✓  Files synchronized
  ✓  Okteto Environment activated
     Namespace: pchico83
-    Name:      shell
-
+    Name:      web
+    Forward:   8080 -> 8080
+    
 curl: (52) Empty reply from server
 Database is ready
 No changes detected in app 'myproject'
