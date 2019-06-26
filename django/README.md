@@ -56,7 +56,22 @@ $ okteto up
     Namespace: pchico83
     Name:      shell
 
-root@shell-f6f5d9d5d-kd5qb:/okteto# 
+curl: (52) Empty reply from server
+Database is ready
+No changes detected in app 'myproject'
+Created migrations
+Operations to perform:
+  Apply all migrations: auth, contenttypes, myproject, sites
+Running migrations:
+  No migrations to apply.
+Migrated DB to latest version
+Performing system checks...
+
+System check identified no issues (0 silenced).
+June 26, 2019 - 11:00:02
+Django version 1.11.21, using settings 'myproject.settings'
+Starting development server at http://0.0.0.0:8080/
+Quit the server with CONTROL-C.
 ```
 
 The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes to the web and worker deployments without having to rebuild or redeploy (eliminating the **docker build/push/pull/redeploy** cycle). You can control how your development environment is created by modifying `okteto.yml`.
