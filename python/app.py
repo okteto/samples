@@ -39,4 +39,16 @@ def hello():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    extra_files = []
+    if "development" == os.getenv("FLASK_ENV"):
+        app.jinja_env.auto_reload = True
+        app.config['TEMPLATES_AUTO_RELOAD'] = True
+        extra_files=[
+            "./static/stylesheets/style.css"
+        ]
+
+    app.run(
+        host='0.0.0.0',
+        port=8080,
+        extra_files=extra_files
+    )
