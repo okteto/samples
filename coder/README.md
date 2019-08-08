@@ -2,7 +2,7 @@
 
 This example shows how to leverage [Okteto](https://okteto.com) to develop a Python Sample App directly in the cloud using [Coder](https://coder.com/). The Python Sample App is deployed using raw Kubernetes manifests.
 
-Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowering experience, follow this [blog post](https://medium.com/okteto/run-coder-directly-in-kubernetes-696a53dc94de) to deploy the Python Sample App in our free-trial [Okteto Kubernetes Cluster](https://cloud.okteto.com).
+Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowering experience, follow this [blog post](https://medium.com/okteto/run-coder-directly-in-kubernetes-696a53dc94de) to deploy the Python Sample App in [Okteto Cloud](https://cloud.okteto.com), a free-trial Kubernetes cluster.
 
 ## Step 1: Install the Okteto CLI
 
