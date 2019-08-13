@@ -1,6 +1,6 @@
 # Helm: Voting App
 
-This example shows how to leverage [Okteto](https://okteto.com) to develop the Voting App directly in the cloud. The Voting App is deployed using raw Kubernetes manifests.
+This example shows how to leverage [Okteto](https://github.com/okteto/okteto) to develop the Voting App directly in the cloud. The Voting App is deployed using raw Kubernetes manifests.
 
 Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. 
 

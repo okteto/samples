@@ -1,6 +1,6 @@
 # VS Code Remote Development with Kubernetes
 
-This example shows how to leverage [Okteto](https://okteto.com) to develop a Python Sample App directly in the cloud using VS Code Remote Development. The Python Sample App is deployed using raw Kubernetes manifests.
+This example shows how to leverage [Okteto](https://github.com/okteto/okteto) to develop a Python Sample App directly in the cloud using VS Code Remote Development. The Python Sample App is deployed using raw Kubernetes manifests.
 
 Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. For a empowered experience, follow this [blog post](https://medium.com/okteto/vs-code-remote-development-in-kubernetes-d7eef7cea4fd) to deploy the Python Sample App in [Okteto Cloud](https://cloud.okteto.com), a free-trial Kubernetes cluster.
 

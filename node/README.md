@@ -1,6 +1,6 @@
 # Node + React Sample App
 
-This example shows how to leverage [Okteto](https://okteto.com) to develop a Node + React Sample App directly in the cloud. The Node + React Sample App is deployed using raw Kubernetes manifests and exposes three services:
+This example shows how to leverage [Okteto](https://github.com/okteto/okteto) to develop a Node + React Sample App directly in the cloud. The Node + React Sample App is deployed using raw Kubernetes manifests and exposes three services:
 
 - A *React* based front-end, using [webpack](https://webpack.js.org) as bundler and *hot-reload server* for development.
 - A very simple Node.js API using [Express](https://expressjs.com).

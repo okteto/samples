@@ -1,6 +1,6 @@
 # Django + Celery Sample App
 
-This example shows how to leverage [Okteto](https://okteto.com) to develop a Django + Celery Sample App directly in Kubernetes. The Django + Celery Sample App is deployed using raw Kubernetes manifests.
+This example shows how to leverage [Okteto](https://github.com/okteto/okteto) to develop a Django + Celery Sample App directly in Kubernetes. The Django + Celery Sample App is deployed using raw Kubernetes manifests.
 
 Okteto works in any Kubernetes cluster (local or remote) by reading your local Kubernetes credentials.
 
