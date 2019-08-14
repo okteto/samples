@@ -1,0 +1,11 @@
+name: java-dev
+image: okteto/gradle:5.1-jdk11
+command: ["bash"]
+securityContext:
+  runAsUser: 1000
+  runAsGroup: 1000
+  fsGroup: 1000
+services:
+   - name: hello
+     mountpath: /app/classes
+     subpath: build/classes/java/main
