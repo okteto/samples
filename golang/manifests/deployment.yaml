@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: math
+  name: hello-world
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: math
+      app: hello-world
   template:
     metadata:
       labels:
-        app: math
+        app: hello-world
     spec:
       containers:
-      - image: okteto/math:latest
-        name: math
+      - image: okteto/hello-world:golang
+        name: hello-world

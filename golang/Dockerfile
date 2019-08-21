@@ -1,12 +1,11 @@
-FROM golang:1.11-alpine
-
-RUN apk --update add --no-cache git musl-dev gcc bash
-
+FROM golang:alpine as dev
+RUN apk --update add --no-cache bash
 WORKDIR /app
-RUN go get github.com/astaxie/beego && go get github.com/beego/bee
 ADD . .
-RUN go build -o mathapp
+RUN go build
 
+FROM alpine as prod
+WORKDIR /app
+COPY --from=dev /app/app /app/app
 EXPOSE 8080
-
-CMD ["./mathapp"]
+CMD ["./app"]

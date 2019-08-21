@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: math
+  name: hello-world
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "math"
+  - name: "hello-world"
     port: 8080
   selector:
-    app: math
+    app: hello-world
