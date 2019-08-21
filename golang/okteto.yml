@@ -1,7 +1,6 @@
-name: math
-image: okteto/math:latest
+name: hello-world
 command: ["bash"]
-workdir: /go/src/app
+workdir: /app
 volumes:
   - /go/pkg/
   - /root/.cache/go-build/

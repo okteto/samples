@@ -25,8 +25,8 @@ Run the Golang Sample App by executing:
 
 ```console
 $ kubectl apply -f manifests
-deployment.apps "math" created
-service "math" created
+deployment.apps "hello-world" created
+service "hello-world" created
 ```
 
 ## Step 3: Create your Okteto Environment
@@ -39,7 +39,7 @@ $ okteto up
  ✓  Files synchronized
  ✓  Your Okteto Environment is ready
     Namespace: cindy
-    Name:      math
+    Name:      hello-world
     Forward:   8080 -> 8080
 
 okteto>
@@ -51,27 +51,22 @@ Once the Okteto Environment is ready, start your application by executing the fo
 
 ```console
 okteto> go run main.go
-Starting beego server...
-2019/06/07 08:37:41.155 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+Starting hello-world server...
 ```
 
-You can now access the Golang Sample App at http://localhost:8080/mult/3/4.
+You can now access the Golang Sample App at http://localhost:8080.
 
 ## Step 4: Develop directly in the cloud
 
-Now things get more exciting. Edit the file `main.go` and switch the word `mult` by `times` at line 43. Save your changes. Cancel the execution of `go run main.go` from your Okteto Terminal by pressing `ctrl + c`. Run your tests to check that everything is fine with your changes:
+Now things get more exciting. Edit the file `main.go` and switch the word `cluster` by `Okteto Cloud` at line 24. Save your changes.
 
-```console
-okteto> go test ./...
-```
-
-And finally rerun your application:
+Cancel the execution of `go run main.go` from your Okteto Terminal by pressing `ctrl + c`. Now rerun your application:
 
 ```console
 okteto> go run main.go
 ```
 
-Go back to the browser, and go to the new endpoint http://localhost:8080/times/3/4. Notice how your changes are instantly applied. No commit, build or push required 😎! 
+Go back to the browser and reload the page. Notice how your changes are instantly applied. No commit, build or push required 😎! 
 
 
 ## Step 5: Cleanup
@@ -86,6 +81,6 @@ $ okteto down -v
 
 ```console
 $ kubectl delete -f manifests
-deployment.apps "math" deleted
-service "math" deleted
+deployment.apps "hello-world" deleted
+service "hello-world" deleted
 ```
