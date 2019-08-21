@@ -58,7 +58,7 @@ You can now access the Golang Sample App at http://localhost:8080.
 
 ## Step 4: Develop directly in the cloud
 
-Now things get more exciting. Edit the file `main.go` and switch the word `cluster` by `Okteto Cloud` at line 24. Save your changes.
+Now things get more exciting. Edit the file `main.go` and replace the word `cluster` with `Okteto Cloud` on line 24. Save your changes.
 
 Cancel the execution of `go run main.go` from your Okteto Terminal by pressing `ctrl + c`. Now rerun your application:
 
