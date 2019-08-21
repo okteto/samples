@@ -1,4 +1,5 @@
 name: hello-world
+image: okteto/hello-world:golang-dev
 command: ["bash"]
 workdir: /app
 volumes:

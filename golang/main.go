@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"os"
 )
 
 const namespaceFile = "/var/run/secrets/kubernetes.io/serviceaccount/namespace"
@@ -16,19 +15,19 @@ func main() {
 }
 
 func helloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, helloMessage())
+	fmt.Println("Received request")
+	namespace, err := getNamespace()
+	if err != nil {
+		fmt.Fprint(w, err)
+	} else {
+		fmt.Fprint(w, fmt.Sprintf("Hello from the cluster namespace '%s'", namespace))
+	}
 }
 
-func helloMessage() string {
-	namespace := getNamespace()
-	return fmt.Sprintf("Hello from the cluster namespace %s", namespace)
-}
-
-func getNamespace() string {
+func getNamespace() (string, error) {
 	bytes, err := ioutil.ReadFile(namespaceFile)
 	if err != nil {
-		fmt.Println("Error reading current namespace")
-		os.Exit(1)
+		return "", fmt.Errorf("Looks like you are not running inside a Kubernetes Pod")
 	}
-	return string(bytes)
+	return string(bytes), nil
 }

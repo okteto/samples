@@ -45,7 +45,10 @@ $ okteto up
 okteto>
 ```
 
-The `okteto up` command will automatically start an Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment.
+The `okteto up` command will automatically start an Okteto Environment, which means:
+
+- The Golang Sample App container is updated with the docker image `okteto/hello-world:golang-dev`. This image contains the required dev tools to build, test and run the Golang Sample App.
+- A bidirectional file synchronization service is started to keep your changes up to date between your local filesystem and your Okteto Environment.
 
 Once the Okteto Environment is ready, start your application by executing the following command in your Okteto Terminal:
 
@@ -58,7 +61,7 @@ You can now access the Golang Sample App at http://localhost:8080.
 
 ## Step 4: Develop directly in the cloud
 
-Now things get more exciting. Edit the file `main.go` and replace the word `cluster` with `Okteto Cloud` on line 24. Save your changes.
+Now things get more exciting. Edit the file `main.go` and replace the word `cluster` with `Okteto Cloud` on line 23. Save your changes.
 
 Cancel the execution of `go run main.go` from your Okteto Terminal by pressing `ctrl + c`. Now rerun your application:
 
