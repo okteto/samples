@@ -47,7 +47,7 @@ okteto>
 
 The `okteto up` command will automatically start an Okteto Environment, which means:
 
-- The Golang Sample App container is updated with the docker image `okteto/hello-world:golang-dev`. This image contains the required dev tools to build, test and run the Golang Sample App.
+- The Golang Sample App container is updated with the docker image `okteto/golang:1`. This image contains the required dev tools to build, test and run the Golang Sample App.
 - A bidirectional file synchronization service is started to keep your changes up to date between your local filesystem and your Okteto Environment.
 
 Once the Okteto Environment is ready, start your application by executing the following command in your Okteto Terminal:
