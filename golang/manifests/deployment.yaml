@@ -17,3 +17,7 @@ spec:
       containers:
       - image: okteto/hello-world:golang
         name: hello-world
+        securityContext:
+          capabilities:
+            add:
+            - SYS_PTRACE

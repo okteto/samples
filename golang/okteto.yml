@@ -6,3 +6,4 @@ volumes:
   - /root/.cache/go-build/
 forward:
   - 8080:8080
+  - 2345:2345 
