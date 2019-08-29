@@ -4,6 +4,10 @@ command: ["bash"]
 volumes:
   - /go/pkg/
   - /root/.cache/go-build/
+securityContext:
+  capabilities:
+    add:
+    - SYS_PTRACE 
 forward:
   - 8080:8080
-  - 2345:2345 
+  - 2345:2345
