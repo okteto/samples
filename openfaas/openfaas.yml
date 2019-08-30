@@ -430,8 +430,6 @@ spec:
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  annotations:
-    dev.okteto.com/auto-ingress: "true"
   labels:
     app: openfaas
     chart: openfaas-4.4.1
