@@ -7,8 +7,6 @@ metadata:
     helm.sh/chart: {{ include "mychart.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
-  annotations:
-    dev.okteto.com/auto-ingress: "true"
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
