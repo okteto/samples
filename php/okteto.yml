@@ -7,7 +7,7 @@ services:
     mountpath: /app
     subpath: api
   - name: web
-    mountpath: /usr/share/nginx/html;
+    mountpath: /usr/share/nginx/html
     subpath: dist
 
 
