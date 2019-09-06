@@ -43,6 +43,8 @@ web-6485689c6b-258m9   1/1     Running   0          47s
 In order to activate your Cloud Native Development, execute:
 
 ```console
+$ okteto up
+Deployment dev doesn't exist in namespace php-rberrelleza. Do you want to create a new one? [y/n]: y
  ✓  Persistent volume provisioned
  ✓  Files synchronized
  ✓  Okteto Environment activated
