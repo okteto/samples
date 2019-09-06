@@ -1,0 +1,39 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: php
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: php
+    spec:
+      containers:
+      - image: php:7-fpm
+        imagePullPolicy: Always
+        name: php
+        workingDir: /app
+        ports:
+        - containerPort: 9000
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"     
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: php
+spec:
+  type: ClusterIP  
+  ports:
+  - name: php
+    port: 9000
+  selector:
+    app: php

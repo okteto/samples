@@ -1,2 +1,4 @@
 *.pyc
 golang/__debug_bin
+php/dist/main.js
+yarn-error.log
