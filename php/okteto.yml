@@ -1,0 +1,13 @@
+name: dev
+image: okteto/desk:latest
+command:
+  - bash
+services:
+  - name: php
+    mountpath: /app
+    subpath: api
+  - name: web
+    mountpath: /usr/share/nginx/html
+    subpath: dist
+
+

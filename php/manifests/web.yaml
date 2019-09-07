@@ -1,0 +1,48 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - image: nginx:alpine 
+        imagePullPolicy: Always
+        name: web
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: nginx-config
+          mountPath: /etc/nginx/conf.d
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"     
+      # Load the configuration files for nginx
+      volumes:
+        - name: nginx-config
+          configMap:
+            name: nginx-config
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: web
+    port: 80
+  selector:
+    app: web

@@ -1,0 +1,5 @@
+/node_modules
+
+# only sychronize dist/index.html
+/dist
+!/dist/index.html
