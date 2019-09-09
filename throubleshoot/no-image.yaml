@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: no-image
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: no-image
+  template:
+    metadata:
+      labels:
+        app: no-image
+    spec:
+      containers:
+      - image: okteto/hello-world:golang-no
+        name: c1
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"

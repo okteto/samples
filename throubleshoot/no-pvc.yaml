@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: no-pvc
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: no-pvc
+  template:
+    metadata:
+      labels:
+        app: no-pvc
+    spec:
+      containers:
+      - image: okteto/hello-world:golang
+        name: c1
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+      volumes:
+        - name: no-pvc
+          persistentVolumeClaim:
+            claimName: no-pvc
