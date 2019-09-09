@@ -8,6 +8,7 @@ const dbName = 'movies';
 
 function startWithRetry() {
   mongo.connect(url, { 
+    useUnifiedTopology: true,
     useNewUrlParser: true,
     reconnectTries: 30,
     reconnectInterval: 1000
