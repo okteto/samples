@@ -12,6 +12,7 @@ spec:
       labels:
         app: web
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - name: web
         image: okteto/django:latest

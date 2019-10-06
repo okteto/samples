@@ -12,6 +12,7 @@ spec:
       labels:
         app: worker
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - name: worker
         image: okteto/django:latest

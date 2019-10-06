@@ -15,7 +15,7 @@ spec:
       securityContext:
         runAsUser: 1000
         fsGroup: 1000
-      terminationGracePeriodSeconds: 5
+      terminationGracePeriodSeconds: 0
       containers:
       - image: okteto/payroll:latest
         name: payroll

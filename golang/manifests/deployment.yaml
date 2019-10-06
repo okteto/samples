@@ -12,6 +12,7 @@ spec:
       labels:
         app: hello-world
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - image: okteto/hello-world:golang
         name: hello-world

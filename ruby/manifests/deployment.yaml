@@ -12,6 +12,7 @@ spec:
       labels:
         app: blog
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - image: okteto/blog:latest
         name: blog

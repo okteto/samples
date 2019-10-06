@@ -12,6 +12,7 @@ spec:
       labels:
         app: vote
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - image: okteto/vote:latest
         name: vote

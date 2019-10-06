@@ -12,6 +12,7 @@ spec:
       labels:
         app: movies-api
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - image: okteto/movies:api
         name: movies-api
