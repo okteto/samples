@@ -9,6 +9,7 @@ spec:
       labels:
         app: web
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - image: nginx:alpine 
         imagePullPolicy: Always

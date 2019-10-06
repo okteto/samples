@@ -9,6 +9,7 @@ spec:
       labels:
         app: php
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - image: php:7-fpm
         imagePullPolicy: Always

@@ -12,6 +12,7 @@ spec:
       labels:
         app: movies-frontend
     spec:
+      terminationGracePeriodSeconds: 0
       containers:
       - image: okteto/movies:frontend
         name: movies-frontend
