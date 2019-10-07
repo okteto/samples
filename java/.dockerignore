@@ -1,9 +1,0 @@
-.gradle
-build
-README.md
-.dockerignore
-Dockerfile
-docker-compose.yml
-manifests
-okteto.yml
-.stignore

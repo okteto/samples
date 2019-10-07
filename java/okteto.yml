@@ -1,8 +1,0 @@
-name: payroll
-image: okteto/payroll:dev
-command:
-- gradle
-- bootRun
-workdir: /home/gradle
-forward:
-  - 8080:8080
