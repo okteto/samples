@@ -1,9 +1,0 @@
-/.gradle
-/build
-/manifests
-/docker-compose.yml
-/Dockerfile
-/.dockerignore
-/.git
-/.gitignore
-README.md
