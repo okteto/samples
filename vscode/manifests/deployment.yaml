@@ -16,10 +16,3 @@ spec:
       containers:
       - image: okteto/vote:latest
         name: vote
-        volumeMounts:
-        - name: ssh
-          mountPath: "/etc/ssh-key"
-      volumes:
-      - name: ssh
-        secret:
-          secretName: ssh-public

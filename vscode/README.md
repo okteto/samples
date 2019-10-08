@@ -32,18 +32,18 @@ Wait for one or two minutes until the application is running. You can access it 
 Now start your Okteto Environment by running the following command:
 
 ```console
-$ okteto up
+$ okteto up --remote 22000
  ✓  Okteto Environment activated
  ✓  Files synchronized
  ✓  Your Okteto Environment is ready
     Namespace: pchico83
     Name:      vote
     Forward:   8080 -> 8080
-               22000 -> 22
+               22000 -> 22001
 
 ```
 
-The `okteto up` command will automatically start an Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment. Last but least, it exposes the container port 22 to localhost:22000 to integrate with VS Code Remote SSH Development.
+The `okteto up` command will automatically start an Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment. Last but least, it exposes a container ssh port to localhost:22000 to integrate with VS Code Remote SSH Development.
 
 Everything is ready now to set up your VS Code Remote SSH extension to point to `localhost:22000` (follow this [link](https://code.visualstudio.com/docs/remote/ssh#_connect-to-a-remote-host) if you are not familiar with this process). In order to indicate the remote server in VS Code, write `-p 22000 root@localhost` as the Remote Host.
 

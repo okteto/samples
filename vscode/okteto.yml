@@ -1,9 +1,7 @@
 name: vote
 image: okteto/vote:ssh
 workdir: /src
-command: [ "sh", "-c", "env > /root/.ssh/environment && cp /etc/ssh-key/* /root/.ssh && /usr/sbin/sshd -D" ]
 environment:
   - FLASK_ENV=development
 forward:
   - 8080:8080
-  - 22000:22
