@@ -2,6 +2,8 @@
 
 This example shows how to leverage [Okteto](https://github.com/okteto/okteto) to develop a Python Sample App directly in Kubernetes using the Visual Studio Code Remote Development extension. 
 
+> This sample requires Okteto 1.4.10 or newer. 
+
 Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. If you don't have access to a local cluster, you can follow this [blog post](https://medium.com/okteto/vs-code-remote-development-in-kubernetes-d7eef7cea4fd) to deploy the Python Sample App in [Okteto Cloud](https://cloud.okteto.com), a free managed Kubernetes service designed for developers.
 
 ## Step 1: Install the Okteto CLI
@@ -51,13 +53,15 @@ INFO[0000] bash exists at /bin/bash
 INFO[0000] ssh server started
 ```
 
-The `okteto up` command will automatically start your Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment. Last but  not least, it will inject an SSH server listening on port 22000 into the development environment. This will enable the integration between the development environment in Kubernetes and the VS Code Remote SSH Development extension.
+The `okteto up` command will automatically start your Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment. Last but  not least, it will inject an SSH server listening on port 22000 into the development environment, and adds an entry to your `~/.ssh/config` file. This will enable the integration between the development environment in Kubernetes and the VS Code Remote SSH Development extension.
 
-We're ready to start developing on our remote environment. Open VS Code, and run `Remote-SSH: Connect to Host...` from the Command Palette (F1) and enter the host and your user on the host in the input box as follows: `-p22000 root@localhost`.
+We're ready to start developing on our remote environment. Open VS Code, and run `Remote-SSH: Connect to Host...` from the Command Palette (F1) and select the `vote.okteto` entry.
 
-> If your connection is hanging, you may need to respond to a server prompt. See [this](https://code.visualstudio.com/docs/remote/troubleshooting#_troubleshooting-hanging-or-failing-connections) for details.
+![select host](assets/select.png)
 
 After a few seconds, VS Code will connect over SSH and configure itself. Once it's finished, you'll be in an empty window. Click on the `Open Folder` button and select `/src`. After a few seconds, the remote folder will be loaded.  
+
+![vscode remote is connected](assets/connected.png)
 
 From now on, any actions you perform will happen directly in your Kubernetes development environment. Open a new terminal window in VS Code (Terminal > New Terminal) and run the following command:
 
