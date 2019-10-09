@@ -2,7 +2,7 @@
 
 This example shows how to leverage [Okteto](https://github.com/okteto/okteto) to develop a Python Sample App directly in Kubernetes using the Visual Studio Code Remote Development extension. 
 
-> This sample requires Okteto 1.4.10 or newer. 
+> This sample requires Okteto 1.5.0 or newer. 
 
 Okteto works in any Kubernetes cluster by reading your local Kubernetes credentials. If you don't have access to a local cluster, you can follow this [blog post](https://medium.com/okteto/vs-code-remote-development-in-kubernetes-d7eef7cea4fd) to deploy the Python Sample App in [Okteto Cloud](https://cloud.okteto.com), a free managed Kubernetes service designed for developers.
 
