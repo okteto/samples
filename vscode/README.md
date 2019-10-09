@@ -25,7 +25,7 @@ Run the Voting App by executing:
 $ kubectl apply -f manifests
 ```
 
-```
+```console
 deployment.apps "vote" created
 service "vote" created
 ```
@@ -47,13 +47,13 @@ $ okteto up --remote 22000
     Namespace: pchico83
     Name:      vote
     Forward:   8080 -> 8080
-               22000 -> 22000
+               22000 -> 22001
 
 INFO[0000] bash exists at /bin/bash
 INFO[0000] ssh server started
 ```
 
-The `okteto up` command will automatically start your Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment. Last but  not least, it will inject an SSH server listening on port 22000 into the development environment, and adds an entry to your `~/.ssh/config` file. This will enable the integration between the development environment in Kubernetes and the VS Code Remote SSH Development extension.
+The `okteto up` command will automatically start your Okteto Environment. It will also start a file synchronization service to keep your changes up to date between your local filesystem and your Okteto Environment. Last but  not least, it will inject an SSH server listening on port 22000 into the development environment, and add an entry to your `~/.ssh/config` file. This will enable the integration between the development environment in Kubernetes and the VS Code Remote SSH Development extension.
 
 We're ready to start developing on our remote environment. Open VS Code, and run `Remote-SSH: Connect to Host...` from the Command Palette (F1) and select the `vote.okteto` entry.
 
@@ -82,7 +82,7 @@ This command will start the python service on your Kubernetes development enviro
 
 Now let's make a code change. Open `app.py` in VS Code and modify the `getOptions` function with the code below:
 
-```
+```python
 def getOptions():
     optionA = 'Otters'
     optionB = 'Dogs'
@@ -99,12 +99,17 @@ Close the remote VS Code instance, and then cancel the `okteto up` command by pr
 
 ```console
 $ okteto down -v
+```
+
+```console
  ✓  Okteto Environment deactivated
- 
 ```
 
 ```console
 $ kubectl delete -f manifests
+```
+
+```console
 deployment.apps "vote" deleted
 service "vote" deleted
 ```
