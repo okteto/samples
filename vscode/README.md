@@ -55,6 +55,8 @@ The `okteto up` command will automatically start your Okteto Environment. It wil
 
 We're ready to start developing on our remote environment. Open VS Code, and run `Remote-SSH: Connect to Host...` from the Command Palette (F1) and enter the host and your user on the host in the input box as follows: `-p22000 root@localhost`.
 
+> If your connection is hanging, you may need to respond to a server prompt. See [this](https://code.visualstudio.com/docs/remote/troubleshooting#_troubleshooting-hanging-or-failing-connections) for details.
+
 After a few seconds, VS Code will connect over SSH and configure itself. Once it's finished, you'll be in an empty window. Click on the `Open Folder` button and select `/src`. After a few seconds, the remote folder will be loaded.  
 
 From now on, any actions you perform will happen directly in your Kubernetes development environment. Open a new terminal window in VS Code (Terminal > New Terminal) and run the following command:
