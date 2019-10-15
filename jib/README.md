@@ -84,7 +84,7 @@ BUILD SUCCESSFUL in 3s
 2 actionable tasks: 2 up-to-date
 ```
 
-Now the binaries are accesible by your application, but since our production image does not hotreaload code changes, we need to restart the app by executing:
+Now the binaries are accessible by your application, but since our production image does not hot-reload code changes, we need to restart the app by executing:
 
 ```
 > okteto restart
