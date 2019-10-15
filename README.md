@@ -8,8 +8,8 @@ This repository contains examples of how to develop applications directly in you
 
 1. [Python](python/README.md)
 1. [Django](django/README.md)
-1. [Golang](golang/README.md)
-1. [Node+React](node/README.md)
+1. [Golang](https://github.com/okteto/go-getting-started/blob/master/README.md)
+1. [Node+React](https://github.com/okteto/movies/blob/master/README.md)
 1. [Ruby](ruby/README.md)
 1. [Java Gradle](https://github.com/okteto/java-gradle-getting-started)
 1. [Java Maven](https://github.com/okteto/java-maven-getting-started)
