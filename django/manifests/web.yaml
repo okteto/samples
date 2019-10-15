@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web
+  labels:
+    app.kubernetes.io/instance: django
 spec:
   replicas: 1
   selector:
@@ -33,6 +35,8 @@ metadata:
   name: web
   annotations:
     dev.okteto.com/auto-ingress: "true"
+  labels:
+    app.kubernetes.io/instance: django
 spec:
   type: ClusterIP  
   ports:

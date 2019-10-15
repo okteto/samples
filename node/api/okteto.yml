@@ -1,6 +1,0 @@
-name: movies-api
-image: okteto/movies:api
-command:
-  - yarn
-  - start
-workdir: /src

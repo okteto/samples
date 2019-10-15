@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: redis
+  labels:
+    app.kubernetes.io/instance: coder
 spec:
   replicas: 1
   selector:

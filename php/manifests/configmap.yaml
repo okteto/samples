@@ -2,6 +2,8 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: nginx-config
+  labels:
+    app.kubernetes.io/instance: php
 data:
   nginx.conf: |
     server {

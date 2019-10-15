@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vote
+  labels:
+    app.kubernetes.io/instance: coder
 spec:
   replicas: 1
   selector:
