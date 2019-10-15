@@ -48,7 +48,7 @@ $ cd samples/jib
 In order to deploy the application, execute:
 
 ```console
-$ kubectl apply -f manifest
+$ kubectl apply -f manifests
 ```
 
 After a few seconds, check that the app is running. If you are using Okteto Cloud, the [Okteto Cloud UI](https://cloud.okteto.com) will show you the endpoint of your application.
@@ -99,8 +99,8 @@ Make a code change in `HelloController.java`, for example, to return the string 
 > okteto restart
 ```
 
-Check your application again and bualá!
+Check your application again and voilà!
 
 Your changes are online in a few seconds, no commit, docker build or push required!
 
-> As you can see, there is a `.stignore` file in the root folder to indicate folders not synched by Okteto. In this case, we are ignoring the `build` folder to avoid synching binaries compiled in remote to our local filesystem. If you remove the `build` folder from the `.stignore` file, you could execute `gradle build` and `okteto restart` locally instead of using the Okteto Terminal (this might give your a deeper integration with your local IDE).
+> As you can see, there is a `.stignore` file in the root folder to indicate folders not synchronized by Okteto. In this case, we are ignoring the `build` folder to avoid synchronizing binaries compiled in remote to our local filesystem. If you remove the `build` folder from the `.stignore` file, you could execute `gradle build` and `okteto restart` locally instead of using the Okteto Terminal (this might give your a deeper integration with your local IDE).
