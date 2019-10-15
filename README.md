@@ -26,3 +26,5 @@ This repository contains examples of how to develop applications directly in you
 ## From the community
 
 1. [Sinatra app] https://github.com/jjuarez/okteto-test
+
+Did we missed your favorite platform? Do you have a cool demo? [File an issue](https://github.com/okteto/samples/issues/new) with your request, or better yet, [send us a PR](https://github.com/okteto/samples/pulls)!
