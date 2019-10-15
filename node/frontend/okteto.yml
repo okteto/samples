@@ -1,6 +1,0 @@
-name: movies-frontend
-image: okteto/movies:frontend
-command: ["bash"]
-workdir: /src
-forward:
-  - 8080:8080
