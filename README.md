@@ -17,7 +17,7 @@ This repository contains examples of how to develop applications directly in you
 
 1. [Multiple services with Node and React](https://github.com/okteto/movies/blob/master/README.md)
 1. [Helm](helm/README.md)
-1. [VS Code Remote Development](vscode/README.md)
+1. [VS Code Remote Development](https://okteto.com/blog/vs-code-remote-development-in-kubernetes/)
 1. [Coder in Kubernetes](coder/README.md)
 1. [OpenFaaS](https://medium.com/okteto/how-to-develop-a-serverless-app-with-openfaas-and-okteto-d85435f0eca1)
 
