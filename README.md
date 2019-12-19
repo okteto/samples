@@ -4,7 +4,7 @@ This repository contains examples of how to develop applications directly in you
 
 ## Scenarios
 
-1. [ASP.NET Core](https://github.com/okteto/aspnetcore-getting-started/master/README.md)
+1. [ASP.NET Core](https://github.com/okteto/aspnetcore-getting-started/)
 1. [Django](django/README.md)
 1. [Golang](https://github.com/okteto/go-getting-started/blob/master/README.md)
 1. [Java Gradle](https://github.com/okteto/java-gradle-getting-started)
