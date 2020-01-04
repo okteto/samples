@@ -1,6 +1,6 @@
 # Develop with Okteto
 
-This repository contains examples of how to develop applications directly in your Kubernetes cluster using [okteto](https://github.com/okteto/okteto), with different programming languages, frameworks and deployment tool.
+This repository contains examples of how to develop applications directly in your Kubernetes cluster using [okteto](https://github.com/okteto/okteto), with different programming languages, frameworks and deployment tools.
 
 ## Programming Languages
 
@@ -22,6 +22,9 @@ This repository contains examples of how to develop applications directly in you
 ## Deployment Tools
 
 1. [Helm](helm/README.md)
+
+## Serverless
+
 1. [OpenFaaS](https://medium.com/okteto/how-to-develop-a-serverless-app-with-openfaas-and-okteto-d85435f0eca1)
 
 ## Remote IDEs
