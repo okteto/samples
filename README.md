@@ -1,8 +1,8 @@
 # Develop with Okteto
 
-This repository contains examples of how to develop applications directly in your Kubernetes cluster using [okteto](https://github.com/okteto/okteto), with different platforms and deployment technologies.
+This repository contains examples of how to develop applications directly in your Kubernetes cluster using [okteto](https://github.com/okteto/okteto), with different programming languages, frameworks and deployment tool.
 
-## By languages
+## Programming Languages
 
 1. [ASP.NET Core](https://github.com/okteto/aspnetcore-getting-started/)
 1. [Golang](https://github.com/okteto/go-getting-started)
@@ -12,19 +12,19 @@ This repository contains examples of how to develop applications directly in you
 1. [PHP](https://github.com/okteto/php-getting-started)
 1. [Python](python/README.md)
 
-## By frameworks
+## Frameworks
 
 1. [Django](django/README.md)
 1. [Multiple services with Node and React](https://github.com/okteto/movies)
 1. [PHP + Webpack](php/README.md)
 1. [Ruby on Rails](ruby/README.md)
 
-## By deployment tools
+## Deployment Tools
 
 1. [Helm](helm/README.md)
 1. [OpenFaaS](https://medium.com/okteto/how-to-develop-a-serverless-app-with-openfaas-and-okteto-d85435f0eca1)
 
-## Remote
+## Remote IDEs
 
 1. [VS Code Remote Development](https://okteto.com/blog/vs-code-remote-development-in-kubernetes/)
 1. [Coder in Kubernetes](coder/README.md)
