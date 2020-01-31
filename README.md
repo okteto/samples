@@ -15,6 +15,7 @@ This repository contains examples of how to develop applications directly in you
 ## Frameworks
 
 1. [Django](django/README.md)
+1. [Node and Websockets](https://github.com/okteto/node-websocket)
 1. [Multiple services with Node and React](https://github.com/okteto/movies)
 1. [PHP + Webpack](php/README.md)
 1. [Ruby on Rails](ruby/README.md)
