@@ -20,7 +20,7 @@ $ cd samples/helm
 
 Deploy the Voting chart using the following command:
 ```console
-$ helm install --name vote ./chart/vote
+$ helm install vote ./chart/vote
 ```
 
 Wait for one or two minutes until the application is running. 
@@ -90,7 +90,7 @@ $ okteto down -v
 
 
 ```console
-$ helm delete --purge vote
+$ helm uninstall vote
 ```
 
 
