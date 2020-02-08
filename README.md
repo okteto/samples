@@ -10,7 +10,7 @@ This repository contains examples of how to develop applications directly in you
 1. [Java Maven](https://github.com/okteto/java-maven-getting-started)
 1. [Node](https://github.com/okteto/node-getting-started)
 1. [PHP](https://github.com/okteto/php-getting-started)
-1. [Python](python/README.md)
+1. [Python](https://github.com/okteto/python-getting-started)
 
 ## Frameworks
 
