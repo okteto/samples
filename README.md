@@ -11,6 +11,7 @@ This repository contains examples of how to develop applications directly in you
 1. [Node](https://github.com/okteto/node-getting-started)
 1. [PHP](https://github.com/okteto/php-getting-started)
 1. [Python](https://github.com/okteto/python-getting-started)
+1. [Ruby](https://github.com/okteto/ruby-getting-started)
 
 ## Frameworks
 
@@ -18,7 +19,7 @@ This repository contains examples of how to develop applications directly in you
 1. [Node and Websockets](https://github.com/okteto/node-websocket)
 1. [Multiple services with Node and React](https://github.com/okteto/movies)
 1. [PHP + Webpack](php/README.md)
-1. [Ruby on Rails](ruby/README.md)
+1. [Ruby on Rails](rails/README.md)
 
 ## Deployment Tools
 
