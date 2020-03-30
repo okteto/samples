@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: cache
-        image: redis:2.8.19
+        image: redis
         resources:
           requests:
             memory: "64Mi"
