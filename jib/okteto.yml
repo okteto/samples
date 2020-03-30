@@ -9,3 +9,5 @@ services:
    - name: hello
      mountpath: /app/classes
      subpath: build/classes/java/main
+persistentVolume:
+  enabled: true

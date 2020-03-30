@@ -59,9 +59,8 @@ In order to activate the development mode in the sample application, execute:
 
 ```
 > okteto up
- ✓  Persistent volume provisioned
  ✓  Files synchronized
- ✓  Okteto Environment activated
+ ✓  Development Environment activated
     Namespace: pchico83
     Name:      java-dev
 
