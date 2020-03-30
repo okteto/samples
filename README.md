@@ -33,7 +33,7 @@ This repository contains examples of how to develop applications directly in you
 
 ## Remote IDEs
 
-1. [VS Code Remote Development](https://okteto.com/blog/vs-code-remote-development-in-kubernetes/)
+1. [VS Code Remote Development](https://okteto.com/blog/remote-kubernetes-development/)
 1. [Coder in Kubernetes](coder/README.md)
 
 ## From the community
