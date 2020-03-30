@@ -29,6 +29,7 @@ This repository contains examples of how to develop applications directly in you
 ## Serverless
 
 1. [OpenFaaS](https://medium.com/okteto/how-to-develop-a-serverless-app-with-openfaas-and-okteto-d85435f0eca1)
+1. [Cloud Run](https://okteto.com/blog/accelerate-serverless-development-with-cloud-run-and-okteto/)
 
 ## Remote IDEs
 
