@@ -9,5 +9,6 @@ services:
   - name: web
     mountpath: /usr/share/nginx/html
     subpath: dist
-
+persistentVolume:
+  enabled: true
 

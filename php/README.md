@@ -45,9 +45,8 @@ In order to activate your Cloud Native Development, execute:
 ```console
 $ okteto up
 Deployment dev doesn't exist in namespace php-rberrelleza. Do you want to create a new one? [y/n]: y
- ✓  Persistent volume provisioned
  ✓  Files synchronized
- ✓  Okteto Environment activated
+ ✓  Development environment activated
     Namespace: php-rberrelleza
     Name:      dev
 
@@ -71,6 +70,8 @@ services:
   - name: web
     mountpath: /usr/share/nginx/html
     subpath: dist
+persistentVolume:
+  enabled: true
 ```
 
 The `name`,`image`, and `command` keys will give Okteto information about your development environment, while the `services` list tells Okteto which other services you want to have as part of your development environment.
