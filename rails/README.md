@@ -31,9 +31,8 @@ In order to activate your Cloud Native Development, execute:
 
 ```console
 $ okteto up
- ✓  Okteto Environment activated
  ✓  Files synchronized
- ✓  Your Okteto Environment is ready
+ ✓  Development Environment activated
     Namespace: cindy
     Name:      blog
     Forward:   8080 -> 8080
@@ -66,19 +65,3 @@ Notice that even though you don't have the application running locally (and you 
 Browse again to your application, it should load without any issues. At this point, you have a web application that can create, show, list, update and destroy articles.
 
 To keep testing the power of cloud native development, continue with the rest of the [getting started guide](https://guides.rubyonrails.org/getting_started.html#adding-a-second-model). Keep creating and editing files in your IDE. 
-
-## Step 4: Cleanup
-
-Cancel the `okteto up` command by pressing `ctrl + c` and run the following commands to remove the resources created by this guide: 
-
-```console
-$ okteto down -v
- ✓  Okteto Environment deactivated
- 
-```
-
-```console
-$ kubectl delete -f manifests
-deployment.apps "blog" deleted
-service "blog" deleted
-```
