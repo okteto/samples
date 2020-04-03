@@ -1,7 +1,11 @@
 name: vote
+labels:
+  app.kubernetes.io/name: vote
 command: ["python", "app.py"]
 workdir: /src
 environment:
   - FLASK_ENV=development
 forward:
   - 8080:8080
+persistentVolume:
+  enabled: false
