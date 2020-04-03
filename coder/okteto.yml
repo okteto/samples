@@ -1,9 +1,11 @@
 name: vote
-image: okteto/coder-python:latest
+image: okteto/coder-python:dev
 workdir: /home/coder/project
-command: ["dumb-init", "code-server", "--no-auth", "--allow-http"]
+command: ["dumb-init", "code-server", "--auth", "none", "--port", "8081", "--host", "0.0.0.0"]
 environment:
   - FLASK_ENV=development
 forward:
-  - 8443:8443
-  - 8080:8080  
+  - 8081:8081
+  - 8080:8080
+persistentVolume:
+  enabled: false
