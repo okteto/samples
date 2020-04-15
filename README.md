@@ -24,6 +24,7 @@ This repository contains examples of how to develop applications directly in you
 
 ## Deployment Tools
 
+1. [Stacks](https://github.com/okteto/stacks-getting-started) (like docker-compose, but for Kubernetes)
 1. [Helm](helm/README.md)
 
 ## Serverless
