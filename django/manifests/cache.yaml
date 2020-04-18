@@ -19,12 +19,9 @@ spec:
       - name: cache
         image: redis
         resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
           limits:
-            memory: "512Mi"
-            cpu: "500m"
+            memory: "100Mi"
+            cpu: "50m"
         
 
 ---

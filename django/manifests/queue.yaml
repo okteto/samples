@@ -24,12 +24,9 @@ spec:
         - name: RABBITMQ_DEFAULT_PASS
           value: mypass
         resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
           limits:
-            memory: "512Mi"
-            cpu: "500m"
+            memory: "200Mi"
+            cpu: "100m"
 
 ---
 
