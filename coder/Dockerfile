@@ -3,6 +3,7 @@ FROM codercom/ubuntu-dev:latest as sail
 # Using official python runtime base image
 FROM codercom/code-server as dev
 
+WORKDIR /home/coder/project/
 # copy vscode extension installer
 COPY --from=sail /usr/bin/installext /usr/bin/installext
 

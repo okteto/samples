@@ -14,9 +14,6 @@ spec:
       labels:
         app: vote
     spec:
-      securityContext:
-        runAsUser: 1000
-        fsGroup: 1000
       containers:
       - image: okteto/vote:redis
         name: vote
