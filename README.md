@@ -17,25 +17,39 @@ This repository contains examples of how to develop applications directly in you
 
 1. [Django](django/README.md)
 1. [Eleventy](https://github.com/okteto/eleventy-getting-started)
+1. [Go + gRPC](https://github.com/okteto/grpc-in-okteto-cloud)
+1. [Flask + CockroachDB](https://github.com/okteto/python-flask-cockroachdb)
+1. [Grails](https://okteto.com/blog/develop-and-deploy-a-grails-application-in-okteto-cloud/)
 1. [Node and Websockets](https://github.com/okteto/node-websocket)
 1. [Multiple services with Node and React](https://github.com/okteto/movies)
 1. [PHP + Webpack](php/README.md)
+1. [React](https://okteto.com/blog/build-your-react-app-in-okteto-cloud/)
 1. [Ruby on Rails](rails/README.md)
 
 ## Deployment Tools
 
-1. [Stacks](https://github.com/okteto/stacks-getting-started) (like docker-compose, but for Kubernetes)
 1. [Helm](helm/README.md)
+1. [Github Actions](https://github.com/okteto/actions)
+1. [Flux](https://okteto.com/blog/okteto-cloud-meets-gitops/)
+1. [Okteto Push](https://okteto.com/blog/okteto-push-code-to-kubernetes-in-seconds/)
+1. [Stacks](https://github.com/okteto/stacks-getting-started) (like docker-compose, but for Kubernetes)
 
 ## Serverless
 
-1. [OpenFaaS](https://medium.com/okteto/how-to-develop-a-serverless-app-with-openfaas-and-okteto-d85435f0eca1)
 1. [Cloud Run](https://okteto.com/blog/accelerate-serverless-development-with-cloud-run-and-okteto/)
+1. [OpenFaaS with Golang](https://medium.com/okteto/how-to-develop-a-serverless-app-with-openfaas-and-okteto-d85435f0eca1)
+1. [OpenFaaS with Node.js](https://github.com/okteto/openfaas-nodejs)
+1. [OpenFaaS with Python](https://github.com/okteto/python-openfaas)
 
 ## Remote IDEs
 
-1. [VS Code Remote Development](https://okteto.com/blog/remote-kubernetes-development/)
 1. [Coder in Kubernetes](coder/README.md)
+1. [TensorFlow with Jupyter Notebooks](https://okteto.com/blog/deploy-jupyter-tensorflow-notebook-in-one-click/)
+1. [VS Code Remote Development](https://okteto.com/blog/remote-kubernetes-development/)
+
+## Secrets
+1. [Okteto Secrets](https://github.com/okteto/secrets-getting-started)
+1. [Vault](https://github.com/okteto/go-vault-secrets)
 
 ## From the community
 
