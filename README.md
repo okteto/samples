@@ -13,6 +13,7 @@ This repository contains examples of how to develop applications directly in you
 1. [Python](https://github.com/okteto/python-getting-started)
 1. [Ruby](https://github.com/okteto/ruby-getting-started)
 
+
 ## Frameworks
 
 1. [Django](django/README.md)
@@ -56,5 +57,6 @@ This repository contains examples of how to develop applications directly in you
 ## From the community
 
 1. [Sinatra app](https://github.com/jjuarez/okteto-test)
+1. [Shopware 6 in Okteto](https://github.com/shyim/shopware-6-okteto)
 
 Did we missed your favorite platform? Do you have a cool demo? [File an issue](https://github.com/okteto/samples/issues/new) with your request, or better yet, [send us a PR](https://github.com/okteto/samples/pulls)!
