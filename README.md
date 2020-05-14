@@ -25,6 +25,7 @@ This repository contains examples of how to develop applications directly in you
 1. [PHP + Webpack](php/README.md)
 1. [React](https://okteto.com/blog/build-your-react-app-in-okteto-cloud/)
 1. [Ruby on Rails](rails/README.md)
+1. [Clojure + Shadow CLJS](https://github.com/okteto/clojure-shadowcljs)
 
 ## Deployment Tools
 
@@ -46,6 +47,7 @@ This repository contains examples of how to develop applications directly in you
 1. [Coder in Kubernetes](coder/README.md)
 1. [TensorFlow with Jupyter Notebooks](https://okteto.com/blog/deploy-jupyter-tensorflow-notebook-in-one-click/)
 1. [VS Code Remote Development](https://okteto.com/blog/remote-kubernetes-development/)
+1. [PyCharm Remote Development](https://okteto.com/blog/remote-development-environments-with-pycharm)
 
 ## Secrets
 1. [Okteto Secrets](https://github.com/okteto/secrets-getting-started)
