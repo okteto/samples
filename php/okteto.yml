@@ -1,5 +1,5 @@
 name: dev
-image: okteto/desk:latest
+image: okteto/dev:latest
 command:
   - bash
 services:

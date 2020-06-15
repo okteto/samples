@@ -60,7 +60,7 @@ Since our application is formed of multiple services, we decided to configure `o
 
 ```yaml
 name: dev
-image: okteto/desk:latest
+image: okteto/dev:latest
 command:
   - bash
 services:
@@ -80,7 +80,7 @@ The `mountpath` and `subpath` keys in the `services` keys tells Okteto [where to
 
 ## Step 4: Install your dependencies
 
-Since we are using a generic development environment (`okteto/desk:latest`), we'll have to install our dev dependencies (on a realistic scenario, we recommend that you extend our dev environments to already include them and save you time and effort).
+Since we are using a generic development environment (`okteto/dev:latest`), we'll have to install our dev dependencies (on a realistic scenario, we recommend that you extend our dev environments to already include them and save you time and effort).
 
 Start by running `yarn install` in your development environment to install all the webpack dev dependencies:
 
