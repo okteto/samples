@@ -31,8 +31,8 @@ In order to activate your Cloud Native Development, execute:
 
 ```console
 $ okteto up
+ ✓  Development container activated
  ✓  Files synchronized
- ✓  Development Environment activated
     Namespace: cindy
     Name:      blog
     Forward:   8080 -> 8080
@@ -40,7 +40,7 @@ $ okteto up
 root@blog-545d954cd5-96fh2:/usr/src/app#
 ```
 
-The `okteto up` command will start a remote development environment that automatically synchronizes and applies your code changes without rebuilding containers. The environment already includes the ruby dev tools, and will automatically forward port 8080 to your local machine.
+The `okteto up` command will start a development container that automatically synchronizes and applies your code changes without rebuilding containers. The development container already includes the ruby dev tools, and will automatically forward port 8080 to your local machine.
 
 Now execute the command below in the Okteto terminal. The command will start your service and reload it automatically after every successful change.
 
@@ -60,7 +60,7 @@ $ rails db:migrate
 $ rails s
 ```
 
-Notice that even though you don't have the application running locally (and you don't have rails installed), the command still runs successfully. This is because okteto is running the command directly in your dev environment in the browser!
+Notice that even though you don't have the application running locally (and you don't have rails installed), the command still runs successfully. This is because okteto is running the command directly in your development container in the browser!
 
 Browse again to your application, it should load without any issues. At this point, you have a web application that can create, show, list, update and destroy articles.
 
