@@ -58,5 +58,6 @@ This repository contains examples of how to develop applications directly in you
 
 1. [Sinatra app](https://github.com/jjuarez/okteto-test)
 1. [Shopware 6 in Okteto](https://github.com/shyim/shopware-6-okteto)
+1. [OpenFaaS Deno HTTP function](https://github.com/austinrivas/openfaas_rust-warp_func)
 
 Did we missed your favorite platform? Do you have a cool demo? [File an issue](https://github.com/okteto/samples/issues/new) with your request, or better yet, [send us a PR](https://github.com/okteto/samples/pulls)!
