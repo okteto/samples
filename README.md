@@ -62,5 +62,6 @@ This repository contains examples of how to develop applications directly in you
 1. [Spring Boot and IntelliJ](https://piotrminkowski.com/2020/06/15/development-on-kubernetes-with-okteto-and-spring-boot/)
 1. [OpenFaaS Deno HTTP function](https://github.com/austinrivas/openfaas_deno_func)
 1. [OpenFaaS Rust HTTP function](https://github.com/austinrivas/openfaas_rust-warp_func)
+1. [Develop and test your code directly in Kubernetes using Okteto and Civo Cloud](https://www.civo.com/learn/okteto-a-tool-to-develop-and-test-your-code-directly-in-kubernetes)
 
 Did we missed your favorite platform? Do you have a cool demo? [File an issue](https://github.com/okteto/samples/issues/new) with your request, or better yet, [send us a PR](https://github.com/okteto/samples/pulls)!
