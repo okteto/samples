@@ -1,10 +1,11 @@
 name: web
-command: ["./run_web.sh"]
+command: ["sh", "-c", "./run_web.sh"]
 mountpath: /app
 forward:
   - 8080:8080
 services:
   - name: worker
     mountpath: /app
+    command: ["sh", "-c", "./run_celery.sh"]
 persistentVolume:
   enabled: true
