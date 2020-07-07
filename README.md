@@ -12,7 +12,7 @@ This repository contains examples of how to develop applications directly in you
 1. [PHP](https://github.com/okteto/php-getting-started)
 1. [Python](https://github.com/okteto/python-getting-started)
 1. [Ruby](https://github.com/okteto/ruby-getting-started)
-
+1. [Rust](http://github.com/okteto/rust-getting-started)
 
 ## Frameworks
 
