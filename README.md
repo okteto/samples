@@ -26,6 +26,7 @@ This repository contains examples of how to develop applications directly in you
 1. [PHP + Webpack](php/README.md)
 1. [React](https://okteto.com/blog/build-your-react-app-in-okteto-cloud/)
 1. [Ruby on Rails](rails/README.md)
+1. [Ruby on Rails + Sidekiq + Redis + PostgreSQL](https://github.com/okteto/chat)
 1. [Clojure + Shadow CLJS](https://github.com/okteto/clojure-shadowcljs)
 
 ## Deployment Tools
