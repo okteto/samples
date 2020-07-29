@@ -1,5 +1,0 @@
-django==1.11.29
-celery==3.1.20
-djangorestframework==3.9.4
-psycopg2==2.8.4
-redis==2.10.5
