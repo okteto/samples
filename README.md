@@ -16,7 +16,7 @@ This repository contains examples of how to develop applications directly in you
 
 ## Frameworks
 
-1. [Django](django/README.md)
+1. [Django + Celery](https://github.com/okteto/math)
 1. [Eleventy](https://github.com/okteto/eleventy-getting-started)
 1. [Go + gRPC](https://github.com/okteto/grpc-in-okteto-cloud)
 1. [Flask + CockroachDB](https://github.com/okteto/python-flask-cockroachdb)
