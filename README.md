@@ -56,6 +56,11 @@ This repository contains examples of how to develop applications directly in you
 ## Secrets
 1. [Okteto Secrets](https://github.com/okteto/secrets-getting-started)
 1. [Vault](https://github.com/okteto/go-vault-secrets)
+1. [Okteto Pipeline with Secrets](https://github.com/okteto/pipeline-with-generated-secrets)
+
+## Applications
+1. [Guestbook](https://github.com/okteto/go-guestbook)
+1. [ToDO List](https://github.com/okteto/go-todo-list)
 
 ## From the community
 
