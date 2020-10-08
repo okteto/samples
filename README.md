@@ -20,6 +20,7 @@ This repository contains examples of how to develop applications directly in you
 1. [Eleventy](https://github.com/okteto/eleventy-getting-started)
 1. [Go + gRPC](https://github.com/okteto/grpc-in-okteto-cloud)
 1. [Flask + CockroachDB](https://github.com/okteto/python-flask-cockroachdb)
+1. [Python, fastapi and Celery](https://github.com/okteto/python-fastapi-celery)
 1. [Grails](https://okteto.com/blog/develop-and-deploy-a-grails-application-in-okteto-cloud/)
 1. [Node and Websockets](https://github.com/okteto/node-websocket)
 1. [Multiple services with Node and React](https://github.com/okteto/movies)
@@ -45,6 +46,7 @@ This repository contains examples of how to develop applications directly in you
 1. [OpenFaaS with Golang](https://medium.com/okteto/how-to-develop-a-serverless-app-with-openfaas-and-okteto-d85435f0eca1)
 1. [OpenFaaS with Node.js](https://github.com/okteto/openfaas-nodejs)
 1. [OpenFaaS with Python](https://github.com/okteto/python-openfaas)
+1. [Kubeless with Python](https://github.com/okteto/python-kubeless)
 
 ## Remote IDEs
 
@@ -59,8 +61,11 @@ This repository contains examples of how to develop applications directly in you
 1. [Okteto Pipeline with Secrets](https://github.com/okteto/pipeline-with-generated-secrets)
 
 ## Applications
-1. [Guestbook](https://github.com/okteto/go-guestbook)
-1. [ToDO List](https://github.com/okteto/go-todo-list)
+1. [Guestbook: Go + Redis](https://github.com/okteto/go-guestbook)
+1. [ToDO List: Go + Postgres](https://github.com/okteto/go-todo-list)
+1. [Chaos Engineering with Litmus and Okteto Cloud](https://github.com/okteto/litmus-on-okteto)
+1. [Polling App: React + Java Spring Boot (Maven) + MySQL](https://github.com/okteto/polling)
+1. [Movies: NodeJs + MongoDB](https://github.com/okteto/movies)
 
 ## From the community
 
