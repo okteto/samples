@@ -56,7 +56,6 @@ This repository contains examples of how to develop applications directly in you
 1. [PyCharm Remote Development](https://okteto.com/blog/remote-development-environments-with-pycharm)
 
 ## Secrets
-1. [Okteto Secrets](https://github.com/okteto/secrets-getting-started)
 1. [Vault](https://github.com/okteto/go-vault-secrets)
 1. [Okteto Pipeline with Secrets](https://github.com/okteto/pipeline-with-generated-secrets)
 
