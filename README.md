@@ -78,4 +78,4 @@ This repository contains examples of how to develop applications directly in you
 1. [Spring Boot and IntelliJ](https://piotrminkowski.com/2020/06/15/development-on-kubernetes-with-okteto-and-spring-boot/)
 1. [Run your own Chainlink Developer Node with Okteto](https://medium.com/@jeevanjotsinghvital/run-your-own-chainlink-developer-node-with-okteto-8adbc9a98664)
 
-Did we missed your favorite platform? Do you have a cool demo? [File an issue](https://github.com/okteto/samples/issues/new) with your request, or better yet, [send us a PR](https://github.com/okteto/samples/pulls)!
+Did we miss your favorite platform? Do you have a cool demo? [File an issue](https://github.com/okteto/samples/issues/new) with your request, or better yet, [send us a PR](https://github.com/okteto/samples/pulls)!
