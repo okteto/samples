@@ -66,6 +66,7 @@ This repository contains examples of how to develop applications directly in you
 1. [Polling App: React + Java Spring Boot (Maven) + MySQL](https://github.com/okteto/polling)
 1. [Movies: NodeJs + MongoDB](https://github.com/okteto/movies)
 1. [Message Processing: Python + Flask + Kafka](https://github.com/okteto/kafka-stack)
+1. [GraphQL: Node + Apollo Server](https://github.com/okteto/node-graphql-server)
 
 ## From the community
 
