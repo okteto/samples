@@ -5,15 +5,16 @@ This repository contains examples of how to develop applications directly in you
 ## Programming Languages
 
 1. [ASP.NET Core](https://github.com/okteto/aspnetcore-getting-started/)
-1. [Golang](https://github.com/okteto/go-getting-started)
-1. [Java Gradle](https://github.com/okteto/java-gradle-getting-started)
-1. [Java Maven](https://github.com/okteto/java-maven-getting-started)
-1. [Node](https://github.com/okteto/node-getting-started)
-1. [PHP](https://github.com/okteto/php-getting-started)
-1. [Python](https://github.com/okteto/python-getting-started)
-1. [Ruby](https://github.com/okteto/ruby-getting-started)
-1. [Rust](https://github.com/okteto/rust-getting-started)
-1. [C](https://github.com/okteto/c-getting-started)
+2. [Deno](https://github.com/okteto/deno-getting-started)
+3. [Golang](https://github.com/okteto/go-getting-started)
+4. [Java Gradle](https://github.com/okteto/java-gradle-getting-started)
+5. [Java Maven](https://github.com/okteto/java-maven-getting-started)
+6. [Node](https://github.com/okteto/node-getting-started)
+7. [PHP](https://github.com/okteto/php-getting-started)
+8. [Python](https://github.com/okteto/python-getting-started)
+9. [Ruby](https://github.com/okteto/ruby-getting-started)
+10. [Rust](https://github.com/okteto/rust-getting-started)
+11. [C](https://github.com/okteto/c-getting-started)
 
 ## Frameworks
 
