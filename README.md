@@ -73,7 +73,7 @@ This repository contains examples of how to develop applications directly in you
 
 ## From the community
 
-1. [AngularJS](https://blogs.cisco.com/developer/devops-part-12)
+1. [Developing Like a Boss Series: AngularJS + Python + Spark](https://blogs.cisco.com/developer/devops-part-12)
 1. [Develop and test your code directly in Kubernetes using Okteto and Civo Cloud](https://www.civo.com/learn/okteto-a-tool-to-develop-and-test-your-code-directly-in-kubernetes)
 1. [OpenFaaS Deno HTTP function](https://github.com/austinrivas/openfaas_deno_func)
 1. [OpenFaaS Rust HTTP function](https://github.com/austinrivas/openfaas_rust-warp_func)
