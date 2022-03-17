@@ -6,7 +6,7 @@ Okteto works in any Kubernetes cluster (local or remote) by reading your local K
 
 ## Step 1: Install the Okteto CLI
 
-Install the Okteto CLI by following our [installation guides](https://github.com/okteto/okteto/blob/master/docs/installation.md).
+Install the Okteto CLI by following our [installation guides](https://okteto.com/docs/getting-started/).
 
 
 ## Step 2: Launch the app
