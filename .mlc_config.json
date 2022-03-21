@@ -3,5 +3,9 @@
         {
             "pattern": ".*localhost.*"
         }
+    ],
+    "aliveStatusCodes": [
+        200,
+        403
     ]
 }
