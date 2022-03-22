@@ -1,5 +1,6 @@
 name: dev
 image: okteto/dev:latest
+autocreate: true
 command:
   - bash
 sync:
