@@ -35,12 +35,11 @@ This repository contains examples of how to develop applications directly in you
 
 ## Deployment Tools
 
-1. [Helm](helm/README.md)
+1. [Helm](https://github.com/okteto/movies-with-helm)
+1. [Docker Compose](https://github.com/okteto/movies-with-compose)
 1. [Kustomize](https://github.com/okteto/polling)
-1. [Github Actions](https://github.com/okteto/actions)
+1. [Github Actions](https://github.com/marketplace?type=actions&query=okteto+)
 1. [Flux](https://okteto.com/blog/okteto-cloud-meets-gitops/)
-1. [Okteto Push](https://okteto.com/blog/okteto-push-code-to-kubernetes-in-seconds/)
-1. [Stacks](https://github.com/okteto/stacks-getting-started) (like docker-compose, but for Kubernetes)
 
 ## Serverless
 
