@@ -1,8 +1,14 @@
-name: blog
-image: okteto/blog:latest
-command: ["bash"]
-workdir: /usr/src/app
-forward:
-  - 8080:8080
-persistentVolume:
-  enabled: false
+build:
+  image: okteto.dev/blog:latest
+  context: .
+
+deploy:
+  - kubectl apply -f manifests
+
+dev:
+  blog:
+    command: bash
+    sync:
+      - .:/usr/src/app
+    forward:
+      - 8080:8080

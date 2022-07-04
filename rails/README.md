@@ -8,21 +8,13 @@ Okteto works in any Kubernetes cluster by reading your local Kubernetes credenti
 
 Install the Okteto CLI by following our [installation guides](https://www.okteto.com/docs/getting-started/).
 
-## Step 2: Deploy the Rails Sample App
+## Step 2: Clone the Rails Sample App
 
 Clone the repository and go to the rails-kubectl folder.
 
 ```console
 $ git clone https://github.com/okteto/samples
 $ cd samples/ruby
-```
-
-Deploy the blog application by using the following command:
-
-```console
-$ kubectl apply -f manifests
-deployment.apps "blog" created
-service "blog" created
 ```
 
 ## Step 3: Cloud Native Development

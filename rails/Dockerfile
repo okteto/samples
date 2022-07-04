@@ -1,5 +1,7 @@
 FROM ruby:2.6.2
+
 WORKDIR /usr/src/app
+
 RUN apt-get update && \
     apt-get install -y sqlite3
 
