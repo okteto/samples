@@ -62,7 +62,7 @@ This repository contains examples of how to develop applications directly in you
 
 ## Applications
 1. [Movies: NodeJs + MongoDB](https://github.com/okteto/movies)
-1. [Movies: Multirepo](https://github.com/okteto/movies-api)
+1. [Movies: Multirepo](https://github.com/okteto/movies-multi-repo)
 1. [Guestbook: Go + Redis](https://github.com/okteto/go-guestbook)
 1. [ToDO List: Go + Postgres](https://github.com/okteto/go-todo-list)
 1. [Chaos Engineering with Litmus and Okteto Cloud](https://github.com/okteto/litmus-on-okteto)
