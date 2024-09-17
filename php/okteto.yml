@@ -1,15 +1,17 @@
-name: dev
-image: okteto/dev:latest
-autocreate: true
-command:
-  - bash
-sync:
-  - .:/usr/src/app
-services:
-  - name: php
+dev:
+  shell:
+    autocreate: true
+    image: okteto/dev:latest
+    command: bash
     sync:
-      - api:/app
-  - name: web
-    sync:
-      - dist:/usr/share/nginx/html
+      - .:/usr/src/app
+    forward:
+      - 8080:web:80
+    services:
+      - name: php
+        sync:
+          - api:/app
+      - name: web
+        sync:
+          - dist:/usr/share/nginx/html
 

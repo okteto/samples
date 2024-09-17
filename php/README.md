@@ -6,7 +6,7 @@ Okteto works in any Kubernetes cluster (local or remote) by reading your local K
 
 ## Step 1: Install the Okteto CLI
 
-Install the Okteto CLI by following our [installation guides](https://okteto.com/docs/getting-started/).
+Install the Okteto CLI by following our [installation guides](https://www.okteto.com/docs/get-started/install-okteto-cli/).
 
 
 ## Step 2: Launch the app
@@ -44,11 +44,11 @@ In order to activate your Cloud Native Development, execute:
 
 ```console
 $ okteto up
-Deployment dev doesn't exist in namespace php-rberrelleza. Do you want to create a new one? [y/n]: y
+Deployment dev doesn't exist in namespace "cindy". Do you want to create a new one? [y/n]: y
  ✓  Files synchronized
  ✓  Development environment activated
-    Namespace: php-rberrelleza
-    Name:      dev
+    Namespace: cindy
+    Name:      shell
 
 Welcome to your development environment. Happy coding!
 okteto>
@@ -59,24 +59,27 @@ The `okteto up` command will start a remote development environment that automat
 Since our application is formed of multiple services, we decided to configure `okteto.yml` to create a multi-service remote development environment:
 
 ```yaml
-name: dev
-image: okteto/dev:latest
-command:
-  - bash
-services:
-  - name: php
-    mountpath: /usr/src/app
-    subpath: app
-  - name: web
-    mountpath: /usr/share/nginx/html
-    subpath: dist
-persistentVolume:
-  enabled: true
+dev:
+  shell:
+    autocreate: true
+    image: okteto/dev:latest
+    command: bash
+    sync:
+      - .:/usr/src/app
+    forward:
+      - 8080:web:80
+    services:
+      - name: php
+        sync:
+          - api:/app
+      - name: web
+        sync:
+          - dist:/usr/share/nginx/html
 ```
 
-The `name`,`image`, and `command` keys will give Okteto information about your development environment, while the `services` list tells Okteto which other services you want to have as part of your development environment.
+The `image` and `command` keys will give Okteto information about your development environment, while the `services` list tells Okteto which other services you want to have as part of your development environment.
 
-The `mountpath` and `subpath` keys in the `services` keys tells Okteto [where to mount your local folder](https://okteto.com/docs/reference/manifest/index.html#mountpath-string-optional) in your serivces.  [This page](https://okteto.com/docs/reference/manifest/index.html#services-object-optional) has more information about services, and all the values you can configure.
+The `sync` keys in the `services` keys tells Okteto [where to mount your local folder](https://www.okteto.com/docs/reference/okteto-manifest/#sync-string-required) in your serivces.  [This page](https://www.okteto.com/docs/reference/okteto-manifest/#services-object-optional) has more information about services, and all the values you can configure.
 
 ## Step 4: Install your dependencies
 
@@ -114,13 +117,7 @@ Entrypoint main = main.js
     + 1 hidden module
 ```
 
-To keep things simple, we'll use a port-forward to access the NGINX service directly via `localhost:80`. Open a local terminal and run the following `kubectl` command:
-
-```console
-kubectl port-forward svc/web 8080:80
-```
-
-Open http://localhost:8080/ in your browser and, if everything went right, you should see the following text: 'Hello webpack'.
+To keep things simple, we configured a `forward` to access the NGINX service directly via `localhost:8080` in the Okteto Manifest. Open http://localhost:8080/ in your browser and, if everything went right, you should see the following text: 'Hello webpack'.
 
 ## Step 5: Live coding
 
