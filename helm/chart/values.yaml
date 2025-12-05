@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: okteto/vote
+  repository: ghcr.io/okteto/vote
   tag: "latest"
   pullPolicy: IfNotPresent
 

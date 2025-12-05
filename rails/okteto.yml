@@ -1,14 +1,14 @@
 build:
-  image: okteto.dev/blog:latest
-  context: .
+  blog:
+    context: .
 
 deploy:
-  - kubectl apply -f manifests
+  - envsubst < k8s.yml | kubectl apply -f -
 
 dev:
   blog:
-    command: bash
     sync:
       - .:/usr/src/app
     forward:
       - 8080:8080
+    command: bash

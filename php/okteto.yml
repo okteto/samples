@@ -1,7 +1,7 @@
 dev:
   shell:
     autocreate: true
-    image: okteto/dev:latest
+    image: ghcr.io/okteto/dev:latest
     command: bash
     sync:
       - .:/usr/src/app

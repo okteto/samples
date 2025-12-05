@@ -1,9 +1,8 @@
-name: java-dev
-image: okteto/gradle:latest
-command: ["bash"]
-services:
-   - name: hello
-     mountpath: /app/classes
-     subpath: build/classes/java/main
-persistentVolume:
-  enabled: true
+dev:
+  java-dev:
+    image: ghcr.io/okteto/gradle:latest
+    command: ["bash"]
+    services:
+      - name: hello
+        sync:
+          - build/classes/java/main:/app/classes

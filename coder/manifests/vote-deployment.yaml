@@ -15,5 +15,5 @@ spec:
         app: vote
     spec:
       containers:
-      - image: okteto/vote:redis
+      - image: ghcr.io/okteto/vote:redis
         name: vote
